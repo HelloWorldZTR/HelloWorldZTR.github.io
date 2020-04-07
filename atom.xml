@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://helloworldztr.github.io/"/>
-  <updated>2020-04-07T03:17:00.790Z</updated>
+  <updated>2020-04-07T08:09:05.124Z</updated>
   <id>https://helloworldztr.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>All Black! Be quiet! PURE BASE 500 Build pt.1</title>
+    <link href="https://helloworldztr.github.io/2020/04/07/All-Black-Be-quite/"/>
+    <id>https://helloworldztr.github.io/2020/04/07/All-Black-Be-quite/</id>
+    <published>2020-04-07T05:45:51.000Z</published>
+    <updated>2020-04-07T08:09:05.124Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Translated from <a href="https://www.chiphell.com/thread-2192145-1-1.html" target="_blank" rel="noopener">https://www.chiphell.com/thread-2192145-1-1.html</a>.<br>Only for learning.<br>PS. It hard to translate all this article at the same time without mistake, so I split it into 3 parts. I’d also like to build something like this, I really love this style!</p></blockquote><h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><p>I didn’t waste time though I was resting at home. So I helped build a system. After trying out builds with all kinds of lighting effects, a system with out lighting effects seems to be more out-standing. I used <code>Ryzen 7 3700X + X570 + RTX 2080</code> platform. Considering that it has no lighting effects, I chose <code>be quiet!</code>‘s <code>PURE BASE 500</code> for the case. It has a simple but elegant design and is pretty easy to install. For cooling, an air-cooling solution with out RGB was the best choice. It turned out to be extreamly quiet. And as for the power-supply, I used a <code>HCG750</code> with 10 years waranty.</p><p>Here are the basic requirements for this build:</p><ul><li>Powerful and can handle jobs for designing, video and photo editing and can provide a smooth experience playing PUBG or watching hi-res videos.</li><li>Look simple and does need to have any lighting effects.</li><li>Have good expandability and is easy to add additional memory and storage later.</li></ul><p>Build specs:</p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Processor</td><td>AMD Ryzen 7 3700X</td></tr><tr><td>Motherboard</td><td>Asus STRIX X570-E GAMING</td></tr><tr><td>Memory</td><td>Corsair dominator platinum DDR4 3200 16GB x 2</td></tr><tr><td>Graphics Card</td><td>EVGA GeForce RTX 2080 FTW3 ULTRA GAMING</td></tr><tr><td>SSD Storage</td><td>Wd SN750 1TB</td></tr><tr><td>Cooler</td><td>be quiet! DARK ROCK PRO 4</td></tr><tr><td>Cooling Fan</td><td>be quiet! SILENT WINGS 3 PWM 120mm x 4</td></tr><tr><td>Power-supply</td><td>Antec HCG750 Gold</td></tr><tr><td>Case</td><td>be quiet! PURE BASE 500 (with glass panel)</td></tr></tbody></table><h2 id="Build-Show"><a href="#Build-Show" class="headerlink" title="Build Show"></a>Build Show</h2><p>45°</p><p><img src="https://static.chiphell.com/forum/202003/03/212744m2ea9tnrzler92t9.jpg" alt=""></p><p><img src="https://static.chiphell.com/forum/202003/03/212744m6kmygykku0kb55x.jpg" alt=""></p><p>The front view of the case: it uses a round-cut design and has a quality brushed finish</p><p><img src="https://static.chiphell.com/forum/202003/03/212745ph77mfmaumf7jdj1.jpg" alt=""></p><p><code>be quiet!</code>‘s logo</p><p><img src="https://static.chiphell.com/forum/202003/03/212745f6m7ydm411up0654.jpg" alt=""></p><p>Front IO and button: 2 USB 3.0, start button and audio jack.</p><p><img src="https://static.chiphell.com/forum/202003/03/212746uqfdfn4wf1vbf7eh.jpg" alt=""></p><p>Top View of the case: A dust filter and cooling holes at the back of the case.</p><p><img src="https://static.chiphell.com/forum/202003/03/212746jtovkwob9u44itkk.jpg" alt=""></p><p>After removing the panel, you can see the top mounting holes for the fans. It also includes a magnetic dust filter which can stick to the top of the case to help improve cooling.</p><p><img src="https://static.chiphell.com/forum/202003/03/212746u0s3xd3jffumsgdy.jpg" alt=""></p><p>The back of the case:</p><p><img src="https://static.chiphell.com/forum/202003/03/212747gjyr4uqc4y59srzm.jpg" alt=""><br><img src="https://static.chiphell.com/forum/202003/03/212805v826sus8p9l278bj.jpg" alt=""></p><p>A large filter at the bottom of the case:</p><p><img src="https://static.chiphell.com/forum/202003/03/212806sg9t2ennjkjkjj9j.jpg" alt=""><br><img src="https://static.chiphell.com/forum/202003/03/212806pe8crscrl8fzdclf.jpg" alt=""></p><p>Can be pulled out for cleaning.</p><p><img src="https://static.chiphell.com/forum/202003/03/212807tc72xxqx99y2ync4.jpg" alt=""></p><p>On the left side of the case, there is a large piece of tempered glass. And on the right is steel.<br>After removing the panel:</p><p><img src="https://static.chiphell.com/forum/202003/03/212828tzvbrbeufrqrr7ub.jpg" alt=""><br><img src="https://static.chiphell.com/forum/202003/03/212828vbp8bp1yzfrb1f7r.jpg" alt=""></p><p>45°</p><p><img src="https://static.chiphell.com/forum/202003/03/212828quurucacn0yhynny.jpg" alt=""><br><img src="https://static.chiphell.com/forum/202003/03/212829may9s9ir9asbsb6v.jpg" alt=""></p><p>Main components. You can see it’s almost matt black and grey.</p><p><img src="https://static.chiphell.com/forum/202003/03/212943uqsr152sppxrbkf2.jpg" alt=""></p><p>The HUGE cooler:</p><p><img src="https://static.chiphell.com/forum/202003/03/212924cwlw2ryqfzs9uur5.jpg" alt=""></p><p><img src="https://static.chiphell.com/forum/202003/03/212925gryl4ybll6bbwzxy.jpg" alt=""></p><p>Memory:</p><p><img src="https://static.chiphell.com/forum/202003/03/212914ygghosnxogjzd0vd.jpg" alt=""></p><p>A little cover for cable management. It has a <code>be quiet!</code> logo on it.</p><p><img src="https://static.chiphell.com/forum/202003/03/212916dm68jmoj6zacv3vv.jpg" alt=""></p><p>Graphics card:<br>The 3 slot card is really bulky. You can see the THICK heat sink and heat pipe.</p><p><img src="https://static.chiphell.com/forum/202003/03/212919q5rrhr3z5j1ykjr3.jpg" alt=""></p><p>RTX 2080:<br><img src="https://static.chiphell.com/forum/202003/03/212920ae1a319rod31irab.jpg" alt=""></p><p>Jumpers on the mother board:</p><p><img src="https://static.chiphell.com/forum/202003/03/212918j0yoyq4bg4ok8555.jpg" alt=""></p><p>There is plenty of holes at the top of the power-supply to provide cool air for the graphics card.</p><p><img src="https://static.chiphell.com/forum/202003/03/212918e3z8iytet08wzy3i.jpg" alt=""></p><p>Three 12cm fans in the front of the case to intake fresh air:</p><p><img src="https://static.chiphell.com/forum/202003/03/212921iqqnvzxhgq6voohu.jpg" alt=""></p><p><img src="https://static.chiphell.com/forum/202003/03/212921az7epaad6aqpfwg6.jpg" alt=""></p><p>The jumper cover where you can hide your pci-e power cord.</p><p><img src="https://static.chiphell.com/forum/202003/03/212922fz5ck45j9znz77ls.jpg" alt=""></p><p>The cool air will be directly sent to the CPU cooler, and then exhausted by the fan on the back.</p><p><img src="https://static.chiphell.com/forum/202003/03/212923m6r3z3uervasqd10.jpg" alt=""></p><p><img src="https://static.chiphell.com/forum/202003/03/212922n1ue1uozrrmovqpm.jpg" alt=""></p><p>You cannot install the graphics card vertically.</p><p><img src="https://static.chiphell.com/forum/202003/03/212923kim6ddv3u3j9zfjd.jpg" alt=""></p><p>Mounting holes on the back of the mother board: support dual 2.5 inch hard drive.</p><p><img src="https://static.chiphell.com/forum/202003/03/213448o46lsiqvz6dwwtv4.jpg" alt=""></p><p>Cables:</p><p><img src="https://static.chiphell.com/forum/202003/03/213449m0cs9sfvvxguov2k.jpg" alt=""></p><p>Power-supply base:</p><p><img src="https://static.chiphell.com/forum/202003/03/213449tjbc8bjjsh4onhpg.jpg" alt=""></p><p>Front hard drive base: you can install two 3.5 inch hard drive</p><p><img src="https://static.chiphell.com/forum/202003/03/213450enqgwjqy5zznng88.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Translated from &lt;a href=&quot;https://www.chiphell.com/thread-2192145-1-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.chiphe
+      
+    
+    </summary>
+    
+    
+      <category term="PC building" scheme="https://helloworldztr.github.io/categories/PC-building/"/>
+    
+    
+      <category term="PC building" scheme="https://helloworldztr.github.io/tags/PC-building/"/>
+    
+      <category term="AMD" scheme="https://helloworldztr.github.io/tags/AMD/"/>
+    
+      <category term="translation" scheme="https://helloworldztr.github.io/tags/translation/"/>
+    
+  </entry>
   
   <entry>
     <title>Test Title</title>
