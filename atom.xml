@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HelloWorld</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://helloworldztr.github.io/"/>
+  <updated>2020-04-07T03:17:00.790Z</updated>
+  <id>https://helloworldztr.github.io/</id>
+  
+  <author>
+    <name>HelloWorldZTR</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Test Title</title>
+    <link href="https://helloworldztr.github.io/2020/04/07/test/"/>
+    <id>https://helloworldztr.github.io/2020/04/07/test/</id>
+    <published>2020-04-07T00:49:00.000Z</published>
+    <updated>2020-04-07T03:17:00.790Z</updated>
+    
+    <content type="html"><![CDATA[<p>Test</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Test&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="Test" scheme="https://helloworldztr.github.io/categories/Test/"/>
+    
+    
+      <category term="Website Deploy" scheme="https://helloworldztr.github.io/tags/Website-Deploy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://helloworldztr.github.io/2020/04/07/hello-world/"/>
+    <id>https://helloworldztr.github.io/2020/04/07/hello-world/</id>
+    <published>2020-04-07T00:22:19.944Z</published>
+    <updated>2020-04-07T03:16:36.055Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I am currently a student from China. I personally enjoy programming and PC building, etc. However, due to my schoolwork, I probably have little time to write this blog and have to translate some articles in Chinese. If I posted a blog that is translated from Chinese, I will paste a link at the top of the article.</p><h2 id="Something-about-this-website"><a href="#Something-about-this-website" class="headerlink" title="Something about this website"></a>Something about this website</h2><p>As I cannot get a license for the website ( I am a student QAQ ), this blog is hosted on Github now using GitPage.</p><p>The blog theme is written by cofess, which you can see on the bottom left of the page. Great thanks to cofess. XD</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
