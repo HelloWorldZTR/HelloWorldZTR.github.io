@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://helloworldztr.github.io/2020/03/04/Change-Maven-in-Idea/</loc>
+    
+    <lastmod>2020-04-08T06:41:10.974Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://helloworldztr.github.io/2020/03/10/Hackintosh-ATI-Driver/</loc>
+    
+    <lastmod>2020-04-08T06:39:19.492Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://helloworldztr.github.io/2020/04/07/All-Black-Be-quite/</loc>
     
-    <lastmod>2020-04-08T03:06:49.996Z</lastmod>
+    <lastmod>2020-04-08T06:38:26.038Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://helloworldztr.github.io/1900/01/01/hello-world/</loc>
+    
+    <lastmod>2020-04-08T06:34:37.350Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://helloworldztr.github.io/2020/03/04/Static-Inject-in-Springboot/</loc>
+    
+    <lastmod>2020-04-08T06:24:31.176Z</lastmod>
     
   </url>
   
@@ -12,20 +40,6 @@
     <loc>https://helloworldztr.github.io/about/index.html</loc>
     
     <lastmod>2020-04-08T00:49:05.153Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://helloworldztr.github.io/2020/04/07/test/</loc>
-    
-    <lastmod>2020-04-08T00:41:36.515Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://helloworldztr.github.io/2020/04/07/hello-world/</loc>
-    
-    <lastmod>2020-04-07T03:16:36.055Z</lastmod>
     
   </url>
   
