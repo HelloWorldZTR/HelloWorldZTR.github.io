@@ -38,6 +38,29 @@
   </entry>
   
   <entry>
+    <title>个人博客搭建—使用图床</title>
+    <link href="https://helloworldztr.github.io/2020/05/17/Image-hosting-tips/"/>
+    <id>https://helloworldztr.github.io/2020/05/17/Image-hosting-tips/</id>
+    <published>2020-05-17T04:00:00.000Z</published>
+    <updated>2020-05-17T08:57:55.401Z</updated>
+    
+    <content type="html"><![CDATA[<p>继续填坑，来说怎么向文章里添加图片</p><a id="more"></a><h2 id="图床简介"><a href="#图床简介" class="headerlink" title="图床简介"></a>图床简介</h2><p>图床就是一个存储图片并向互联网提供这些图片的服务器，一般会使用 cdn 等使访问速度较快。</p><h2 id="为什么要使用图床"><a href="#为什么要使用图床" class="headerlink" title="为什么要使用图床"></a>为什么要使用图床</h2><ol><li>服务器承担不了过大的请求数量</li><li>服务器访问缓慢</li><li>更稳定安全的存储（注意某些并不安全，会突然暴毙）</li></ol><p>在最早的文章中，我选择了使用 Github 的免费托管。众所周知在国内 Github 访问是很慢的，所以不用图床会极大影响加载速度和用户体验。</p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>首先，介绍下国内使用还算不错的服务商：</p><ul><li>七牛</li><li><a href="https://sm.ms" target="_blank" rel="noopener">sm.ms</a></li><li><a href="https://imgurl.org/" target="_blank" rel="noopener">imgurl</a></li></ul><p>我现在再用 sm.ms 的，主要是免费还不用注册(最近上传有些慢不知为什么)。</p><h3 id="准备好你要的图片"><a href="#准备好你要的图片" class="headerlink" title="准备好你要的图片"></a>准备好你要的图片</h3><blockquote><p>小技巧：截图快捷键<br>Windows 用户: <code>Windows+Shift+S</code> (Windows 10) 或 <code>PrintScreen</code> 键<br>mac 用户: <code>Command+Shift+4</code> (区域截图) 按一下空格切换到窗口截图</p></blockquote><p>注意，如果网速不好压缩一下也是个好办法。<br>压缩网址<a href="https://tinypng.com" target="_blank" rel="noopener">https://tinypng.com</a></p><h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p><img src="https://i.loli.net/2020/05/17/MWXAynGBtc4qLEj.png" alt="屏幕快照 2020-05-17 下午4.51.11.png"></p><p>说的很清楚：把文件拖到这里，或者复制粘贴</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><img src="https://i.loli.net/2020/05/17/aVqkPBilnC8MAh5.png" alt="屏幕快照 2020-05-17 下午4.54.41.png"></p><p>选择 markdown，复制下来插入 markdown 源码即可。注意别粘错了</p><p>看起来像这样</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">提示语</span>](<span class="link">url</span>)</span><br></pre></td></tr></table></figure><p>刷新一下就能用啦</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;继续填坑，来说怎么向文章里添加图片&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Develop" scheme="https://helloworldztr.github.io/categories/Develop/"/>
+    
+    
+      <category term="Website" scheme="https://helloworldztr.github.io/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个人博客搭建—使用 Gitalk</title>
     <link href="https://helloworldztr.github.io/2020/04/09/Gitalk-register-and-use/"/>
     <id>https://helloworldztr.github.io/2020/04/09/Gitalk-register-and-use/</id>
