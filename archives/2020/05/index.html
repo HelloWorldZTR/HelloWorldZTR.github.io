@@ -18,22 +18,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Spring Boot 注入静态变量 | HelloWorld</title>
-  <meta name="description" content="你承受过NullPointerException的痛苦吗？Spring Boot的静态变量注入使我体会到了生命的意义（手动滑稽）">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot 注入静态变量">
-<meta property="og:url" content="https://helloworldztr.github.io/2020/03/04/Static-Inject-in-Springboot/index.html">
+  <title>Archive: 2020/5 | HelloWorld</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="HelloWorld">
+<meta property="og:url" content="https://helloworldztr.github.io/archives/2020/05/index.html">
 <meta property="og:site_name" content="HelloWorld">
-<meta property="og:description" content="你承受过NullPointerException的痛苦吗？Spring Boot的静态变量注入使我体会到了生命的意义（手动滑稽）">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-04T13:00:30.000Z">
-<meta property="article:modified_time" content="2020-04-08T06:24:31.176Z">
 <meta property="article:author" content="HelloWorldZTR">
-<meta property="article:tag" content="java">
-<meta property="article:tag" content="springboot">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://helloworldztr.github.io/2020/03/04/Static-Inject-in-Springboot/index.html">
+  <link rel="canonical" href="https://helloworldztr.github.io/archives/2020/05/index.html">
   
     <link rel="alternate" href="/atom.xml" title="HelloWorld" type="application/atom+xml">
   
@@ -315,160 +309,48 @@
   
   
 <main class="main" role="main">
-  <div class="content">
-  <article id="post-Static-Inject-in-Springboot" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  	<article class="content article article-archives article-type-list" itemscope="">
+	    <header class="article-header">
+	      <h1 itemprop="title">Archive: 2020/5</h1>
+	      <p class="text-muted">Total 1 articles</p>
+	    </header>
+	    <div class="article-body">
+	      
+  
+  
     
-    <div class="article-header">
+    
       
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Spring Boot 注入静态变量
-    </h1>
-  
-
       
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2020/03/04/Static-Inject-in-Springboot/" class="article-date">
-	  <time datetime="2020-03-04T13:00:30.000Z" itemprop="datePublished">2020-03-04</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Develop/">Develop</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/java/" rel="tag">java</a>, <a class="article-tag-link" href="/tags/springboot/" rel="tag">springboot</a>
-  </span>
-
-
-        
-	<span class="article-read hidden-xs">
-	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
-	    <span id="busuanzi_container_page_pv">
-			<span id="busuanzi_value_page_pv">0</span>
-		</span>
-	</span>
-
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/03/04/Static-Inject-in-Springboot/#comments" class="article-comment-link">Comments</a></span>
-        
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 211(words)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 1(minutes)</span>
-	
-
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p>你承受过NullPointerException的痛苦吗？Spring Boot的静态变量注入使我体会到了生命的意义（手动滑稽）</p>
-<a id="more"></a>
-<p>如果你曾经试过如下的一段代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value</span>(<span class="string">"$&#123;database.driver&#125;"</span>)</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> String driver;</span><br></pre></td></tr></table></figure>
-<p>如果程序鲁棒性不好，你便会得到一个<code>NullPointerException</code><br>反正是不能达到你想要的目的，给静态变量赋值。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
-<li><p>用一个非静态的变量当中介，像这样</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value</span>(<span class="string">"$&#123;database.driver&#125;"</span>)</span><br><span class="line"><span class="keyword">private</span> String _driver;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> String driver;</span><br></pre></td></tr></table></figure>
-<p> 然后在构造函数中将_driver赋给driver即可</p>
-</li>
-<li><p>写一个<code>non-static</code>的set方法，像酱紫</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseDao</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String driver;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDriver</span><span class="params">(@Value(<span class="string">"$&#123;database.driver&#125;"</span>)</span> String driver) </span>&#123;</span><br><span class="line">        BaseDao.driver = driver;</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
-<li>set方法一定是non-static的</li>
-<li>一定要小心加载顺序，static代码块不要随便写，不然又是<code>NullPointerException</code></li>
-</ol>
-
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
+      <section class="panel panel-default b-no">
+        <div class="panel-heading" role="tab">
+          <h3 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2020" aria-expanded="true">
+              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
+              2020
+            </a>
+            <!-- <a href="/archives/2020" class="archive-year">2020</a> -->
+          </h3>
+        </div>
+        <div id="collapse2020" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2020">
+        <div class="panel-body">
+          <div class="collection">
     
-    <li class="post-copyright-link hidden-xs">
-      <strong>Link Addr：</strong>
-      <a href="https://helloworldztr.github.io/2020/03/04/Static-Inject-in-Springboot/" title="Spring Boot 注入静态变量" target="_blank" rel="external">https://helloworldztr.github.io/2020/03/04/Static-Inject-in-Springboot/</a>
-    </li>
     
-    <li class="post-copyright-license">
-      <strong>Copyright： </strong> All articles of this blog use <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0</a> license. Include the link above if you want to copy it！
-    </li>
-  </ul>
-</blockquote>
-
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="javascript:void(0);" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="javascript:void(0);" target="_blank"><span class="text-dark">HelloWorldZTR</span><small class="ml-1x">Developer &amp; PC Enthusiast</small></a></h3>
-        <div>A programmer of some sort. Loves coding and all kinds of things about computers.</div>
-      </div>
-    </figure>
-  </div>
-</div>
-
-
-    </div>
-  </article>
-  
-    
-  <section id="comments">
-  	
-           
-    
-  </section>
+<a href="/2020/05/17/Create-pdf-in-macOS/" class="collection-item" target="_blank" itemprop="url">
+  <time datetime="2020-05-17T07:59:54.000Z" itemprop="datePublished">2020-05-17</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> macOS 小妙招—快速创建 pdf
+</a>
 
 
   
-</div>
-
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
   
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/2020/03/10/Hackintosh-ATI-Driver/" title="黑苹果 ATI HD 显卡通用驱动方式及 HD 5450 的驱动"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/2020/03/04/Change-Maven-in-Idea/" title="修改 IDEA 自带的 maven 源"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
-    
-  </div>
-  </div>
-</nav>
+    </div></div></div></section>
   
 
-
+	    </div>
+  	</article>
+  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -523,33 +405,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-
-   
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-
-   
-    
-  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
-  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
-  <script type="text/javascript">
-  var gitalk = new Gitalk({
-    clientID: '01fc864d74bd515a2d83',
-    clientSecret: '51e1a29999eab500637961161b40630c9167744b',
-    repo: 'HelloWorldZTR.github.io',
-    owner: 'HelloWorldZTR',
-    admin: ['HelloWorldZTR'],
-    id: md5(location.pathname),
-    distractionFreeMode: true
-  })
-  gitalk.render('comments')
-  </script>
-
-      
 
 
 
