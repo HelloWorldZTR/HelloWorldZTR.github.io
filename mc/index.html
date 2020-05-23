@@ -18,20 +18,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>About | HelloWorld</title>
-  <meta name="description" content="IntroductionI am currently a student from China. I personally enjoy programming and PC building, etc. However, due to my schoolwork, I probably have little time to write this blog and have to translat">
+  <title>Minecraft 像素画转换器 | HelloWorld</title>
+  <meta name="description" content=".container {         margin-top: 20px;     }  .image-preview-input {     position: relative;     overflow: hidden;     margin: 0px;     color: #333;     background-color: #fff;     border-c">
 <meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="https://helloworldztr.github.io/about/index.html">
+<meta property="og:title" content="Minecraft 像素画转换器">
+<meta property="og:url" content="https://helloworldztr.github.io/mc/index.html">
 <meta property="og:site_name" content="HelloWorld">
-<meta property="og:description" content="IntroductionI am currently a student from China. I personally enjoy programming and PC building, etc. However, due to my schoolwork, I probably have little time to write this blog and have to translat">
+<meta property="og:description" content=".container {         margin-top: 20px;     }  .image-preview-input {     position: relative;     overflow: hidden;     margin: 0px;     color: #333;     background-color: #fff;     border-c">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-04T13:34:33.000Z">
-<meta property="article:modified_time" content="2020-04-08T00:49:05.153Z">
+<meta property="article:published_time" content="2020-05-23T03:03:49.000Z">
+<meta property="article:modified_time" content="2020-05-23T07:23:29.698Z">
 <meta property="article:author" content="HelloWorldZTR">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://helloworldztr.github.io/about/index.html">
+  <link rel="canonical" href="https://helloworldztr.github.io/mc/index.html">
   
     <link rel="alternate" href="/atom.xml" title="HelloWorld" type="application/atom+xml">
   
@@ -331,7 +331,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      About
+      Minecraft 像素画转换器
     </h1>
   
 
@@ -339,8 +339,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/about/index.html" class="article-date">
-	  <time datetime="2020-04-04T13:34:33.000Z" itemprop="datePublished">2020-04-04</time>
+	<a href="/mc/index.html" class="article-date">
+	  <time datetime="2020-05-23T03:03:49.000Z" itemprop="datePublished">2020-05-23</time>
 	</a>
 </span>
         
@@ -355,23 +355,353 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/about/index.html#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/mc/index.html#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 141(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 1.2k(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 1(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 7(minutes)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I am currently a student from China. I personally enjoy programming and PC building, etc. However, due to my schoolwork, I probably have little time to write this blog and have to translate some articles in Chinese. If I posted a blog that is translated from Chinese, I will paste a link at the top of the article.</p>
-<h2 id="Something-about-this-website"><a href="#Something-about-this-website" class="headerlink" title="Something about this website"></a>Something about this website</h2><p>As I cannot get a license for the website ( I am a student QAQ ), this blog is hosted on Github now using GitPage.</p>
-<p>The blog theme is written by cofess, which you can see on the bottom left of the page. Great thanks to cofess. XD</p>
-<p>I don’t know why I am gonna write this in English. Perhaps it’s a decent way to practice English? IDK. I’ll post my Chinese articles on CSDN, and English ones here.</p>
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--图片上传css-->
+<style>
+    .container {
+        margin-top: 20px;
+    }
+
+<pre><code>.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.image-preview-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.image-preview-input-title {
+    margin-left: 2px;
+}
+
+div #result {
+    overflow-x: scroll;
+    white-space: nowrap;
+    line-height: 16px;
+}</code></pre><p></style></p>
+<!--js核心代码-->
+<script>
+    // 魔法®
+    function getPixel(imgData, index) {
+        var i = index * 4, d = imgData.data;
+        return [d[i], d[i + 1], d[i + 2], d[i + 3]] // [R,G,B,A]
+    }
+    function getPixelXY(imgData, x, y) {
+        return getPixel(imgData, y * imgData.width + x);
+    }
+    function Wool(name, id, src, rgb) {
+        this.name = name;
+        this.id = id;
+        this.src = src;
+        this.rgb = rgb;
+        this.getName = function () { return this.name; }
+        this.getId = function () { return this.id; }
+        this.getSrc = function () { return this.src; }
+        this.getRGB = function () { return this.rgb; }
+        this.getImage = function () {
+            return new Image().src = this.src;
+        }
+    }
+    $(document).on('click', '#close-preview', function () {
+        $('.image-preview').popover('hide');
+        // Hover befor close the preview
+        $('.image-preview').hover(
+            function () {
+                $('.image-preview').popover('show');
+            },
+            function () {
+                $('.image-preview').popover('hide');
+            }
+        );
+    });
+    var width;
+    var height;
+    var cvs;
+    var ctx;
+    var idt;
+    var img;
+    var wools = new Array(
+        new Wool('black', 0, 'https://i.loli.net/2020/05/23/LfWvgJ4QB6jixDX.png', new Array(20, 20, 20)),
+        new Wool('blue', 1, 'https://i.loli.net/2020/05/23/vKYTm3zPfOLZS6M.png', new Array(52, 56, 156)),
+        new Wool('brown', 2, 'https://i.loli.net/2020/05/23/Zt8b2ikBEFHlarV.png', new Array(113, 71, 40)),
+        new Wool('cyan', 3, 'https://i.loli.net/2020/05/23/Y8qQbOtZIe5Rp2l.png', new Array(21, 136, 144)),
+        new Wool('gray', 4, 'https://i.loli.net/2020/05/23/715JZIlmOd6boNM.png', new Array(63, 68, 71)),
+        new Wool('green', 5, 'https://i.loli.net/2020/05/23/Md9TVqx3ybUgEKf.png', new Array(84, 109, 27)),
+        new Wool('light_blue', 6, 'https://i.loli.net/2020/05/23/WnIYFBsGj138xai.png', new Array(58, 177, 218)),
+        new Wool('light_gray', 7, 'https://i.loli.net/2020/05/23/uGvEfnO3KBSsgHT.png', new Array(142, 143, 135)),
+        new Wool('lime', 8, 'https://i.loli.net/2020/05/23/Y8qQbOtZIe5Rp2l.png', new Array(111, 184, 25)),
+        new Wool('magenta', 9, 'https://i.loli.net/2020/05/23/dNPcp2SWwAUQH1R.png', new Array(190, 69, 180)),
+        new Wool('orange', 10, 'https://i.loli.net/2020/05/23/L7P2aZ9hkj4Qcox.png', new Array(241, 119, 20)),
+        new Wool('pink', 11, 'https://i.loli.net/2020/05/23/qDiNEI1Jhv6YBgC.png', new Array(238, 139, 171)),
+        new Wool('purple', 12, 'https://i.loli.net/2020/05/23/4L5MKaTnBRFYywf.png', new Array(119, 40, 170)),
+        new Wool('red', 13, 'https://i.loli.net/2020/05/23/lwVCI5R8ZPHzqxt.png', new Array(160, 39, 34)),
+        new Wool('white', 14, 'https://i.loli.net/2020/05/23/4dr5iqu36aZGbsy.png', new Array(255, 255, 255)),
+        new Wool('yellow', 15, 'https://i.loli.net/2020/05/23/alwkYHR4z2oLWuJ.png', new Array(248, 196, 37))
+    )
+    $(function () {
+        // Clear event
+        $('.image-preview-clear').click(function () {
+            $('.image-preview').attr("data-content", "").popover('hide');
+            $('.image-preview-filename').val("");
+            $('.image-preview-clear').hide();
+            $('.image-preview-input input:file').val("");
+            $(".image-preview-input-title").text("Browse");
+        });
+        // Create the preview image
+        $(".image-preview-input input:file").change(function () {
+            img = $('img#preview')[0];
+            var file = this.files[0];
+            var reader = new FileReader();
+            // Set preview image into the popover data-content
+            reader.onload = function (e) {
+                $(".image-preview-input-title").text("Change");
+                $(".image-preview-clear").show();
+                $(".image-preview-filename").val(file.name);
+                // img.attr('src', e.target.result);
+                img.src = e.target.result;
+                // $(".image-preview").attr("data-content", $(img)[0].outerHTML).popover("show");
+            }
+            reader.readAsDataURL(file);
+            img.onload = function (e) {
+                width = img.width;
+                height = img.height;
+
+                cvs = document.createElement('canvas');
+                cvs.height = height;
+                cvs.width = width;
+                ctx = cvs.getContext('2d');
+                ctx.drawImage(img, 0, 0, width, height);
+                idt = ctx.getImageData(0, 0, width, height);
+                // var pixek = getPixel(idt, 852);
+                // var pixel = getPixelXY(idt, 1, 1);
+                // console.log(pixel);
+                //Init paramiters
+                document.getElementById('width').value = width;
+                document.getElementById('height').value = height;
+
+                // TODO::PROCCESS IMAGE
+                // doImage();
+            }
+        });
+    });
+    function doImage() {
+        console.log("开始处理图像");
+        var img = $('img#preview')[0];
+        var width = Number(document.getElementById('width').value);
+        var height = Number(document.getElementById('height').value);
+        var material;
+        if (document.getElementById('wool').checked) {
+            material = 0;
+        }
+        else {
+            material = 1;
+        }
+        console.log(width);
+        console.log(height);
+        console.log(material);
+        if (width == 0 || height == 0) {
+            window.alert("不合法的宽高")
+        }
+        else if (material > 1 || material < 0) {
+            window.alert("不合法的类型")
+        }
+        cvs = document.createElement('canvas');
+        cvs.height = height;
+        cvs.width = width;
+        ctx = cvs.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+        idt = ctx.getImageData(0, 0, width, height);
+        // TODO::delete this
+        $('#DEBUG').append(cvs);
+
+        var result = document.createElement('div');
+        result.id = 'result';
+        document.getElementById('result-box').appendChild(result);
+
+        window.alert("注意，大量的计算会导致浏览器假死。请耐心等待!!");
+
+        var list = new Array();
+
+        if (material == 0) {
+            for (var y = 0; y < height; y++) {
+                var row = document.createElement('br');
+                for (var x = 0; x < width; x++) {
+                    var pixel = getPixelXY(idt, x, y);
+                    var cell = new Image();
+                    var diff = 10000000000;
+                    var best = 0;
+                    for (var i = 0; i < wools.length; i++) {
+                        var tempRGB = wools[i].getRGB();
+                        var tempDiff = Math.abs(tempRGB[0] - pixel[0]) + Math.abs(tempRGB[1] - pixel[1]) + Math.abs(tempRGB[2] - pixel[2]);
+                        if (tempDiff < diff) {
+                            diff = tempDiff;
+                            best = i;
+                        }
+                    }
+                    cell.src = wools[best].getSrc();
+                    document.getElementById('result').appendChild(cell);
+                    list[best] = list[best] == null ? 0 : list[best] + 1;
+                }
+                document.getElementById('result').appendChild(row);
+            }
+        }
+        document.getElementById('list').style = "";
+        for (var i = 0; i < list.length; i++) {
+            if (list[i] != null) {
+                var row = document.createElement('tr');
+                var name = wools[i].getName();
+                var cnt = list[i];
+                var cell0 = document.createElement('td');
+                var img = new Image();
+                img.src = wools[i].getSrc();
+                cell0.appendChild(img);
+                var cell1 = document.createElement('td');
+                cell1.innerHTML = name;
+                var cell2 = document.createElement('td');
+                cell2.innerHTML = cnt;
+                row.appendChild(cell0);
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+                document.getElementById('list-inner').appendChild(row);
+            }
+        }
+    }
+    function doReset() {
+        document.getElementById('width').value = width == null ? 0 : width;
+        document.getElementById('height').value = height == null ? 0 : height;
+    }
+    function adjustHeight() {
+        if (document.getElementById('lock_ratio').checked) {
+            var tempWidth = Number(document.getElementById('width').value);
+            // var ratio = Math.floor(tempWidth / width);
+            // console.log("Ratio="+ratio)
+            var tempHeight = Math.floor(height * tempWidth / width);
+            tempWidth = Math.floor(width * tempHeight / height);
+            console.log('h=' + tempHeight);
+            console.log('w=' + tempWidth);
+            document.getElementById('width').value = tempWidth;
+            document.getElementById('height').value = tempHeight;
+        }
+    }
+    function adjustWidth() {
+        if (document.getElementById('lock_ratio').checked) {
+            var tempHeight = Number(document.getElementById('height').value);
+            // var ratio = Math.floor(tempHeight / height);
+            // console.log("Ratio="+ratio)
+            var tempWidth = Math.floor(width * tempHeight / height);
+            tempHeight = Math.floor(height * tempWidth / width);
+            console.log('h=' + tempHeight);
+            console.log('w=' + tempWidth);
+            document.getElementById('width').value = tempWidth;
+            document.getElementById('height').value = tempHeight;
+        }
+    }
+    function test() {
+        for (var w = 0; w < wools.length; w++) {
+            var i = new Image();
+            i.src = wools[w].getSrc();
+            document.getElementById('DEBUG').appendChild(i);
+        }
+    }
+</script>
+<div class="row">
+    <!--左栏-->
+    <div class="col-xs-8 col-md-6 col-sm-6 ">
+        <h2>请选择图片</h2>
+        <div class="input-group image-preview">
+            <input type="text" class="form-control image-preview-filename" disabled="disabled">
+            <span class="input-group-btn">
+                <!-- image-preview-clear button -->
+                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                    <span class="glyphicon glyphicon-remove"></span> Clear
+                </button>
+                <!-- image-preview-input -->
+                <div class="btn btn-default image-preview-input">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                    <span class="image-preview-input-title">Browse</span>
+                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                </div>
+            </span>
+        </div>
+        <div id="DEBUG">
+            <img id="preview" />
+        </div>
+    </div>
+    <!--右栏-->
+    <div class="col-xs-4 col-md-4 col-sm-2">
+        <h2>设置</h2>
+        <!-- <form role="form"> -->
+        <div class="form-group">
+            <h4>图片大小</h4>
+            <label>
+                <input id="lock_ratio" type="checkbox" checked>&nbsp;锁定宽高比
+            </label>
+            <label>
+                宽&nbsp;<input id="width" type="number" value="0" onchange="adjustHeight()">
+            </label>
+            <label>
+                高&nbsp;<input id="height" type="number" value="0" onchange="adjustWidth()">
+            </label>
+            <h4>材料</h4>
+            <label>
+                <input id="wool" name="material" type="radio" value="0" checked> 羊毛
+                <input id="conc" name="material" type="radio" value="1"> 混凝土
+            </label>
+            <h4></h4>
+            <button id="btn_ok" class="btn btn-primary" onclick="doImage()">确定</button>
+            &nbsp;
+            <button id="btn_can" class="btn btn-default" onclick="doReset()">重置</button>
+            &nbsp;
+            <button id="btn_test" class="btn btn-default" onclick="test()">Test</button>
+        </div>
+        <!-- </form> -->
+    </div>
+</div>
+<div id="result-box" class="row">
+    <!-- <div id="result" class="col-8">
+    </div> -->
+</div>
+<div id="list" class="row" style="display: none;">
+    <div class="col-4">
+        <h2>物料清单</h2>
+        <table class="table">
+            <tbody id="list-inner">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p>使用前必读： <a href="https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/">https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/</a></p>
 
       
     </div>
@@ -381,7 +711,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>Link Addr：</strong>
-      <a href="https://helloworldztr.github.io/about/index.html" title="About" target="_blank" rel="external">https://helloworldztr.github.io/about/index.html</a>
+      <a href="https://helloworldztr.github.io/mc/index.html" title="Minecraft 像素画转换器" target="_blank" rel="external">https://helloworldztr.github.io/mc/index.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -412,6 +742,12 @@
   </article>
   
     
+  <section id="comments">
+  	
+           
+    
+  </section>
+
 
   
 </div>
@@ -485,6 +821,27 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '01fc864d74bd515a2d83',
+    clientSecret: '51e1a29999eab500637961161b40630c9167744b',
+    repo: 'HelloWorldZTR.github.io',
+    owner: 'HelloWorldZTR',
+    admin: ['HelloWorldZTR'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
 
 
 

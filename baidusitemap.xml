@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://helloworldztr.github.io/2020/05/17/Image-hosting-tips/</loc>
-    <lastmod>2020-05-17</lastmod>
-  </url>  <url>
-    <loc>https://helloworldztr.github.io/2020/05/17/Create-pdf-in-macOS/</loc>
-    <lastmod>2020-05-17</lastmod>
-  </url>  <url>
-    <loc>https://helloworldztr.github.io/2020/03/10/Hackintosh-ATI-Driver/</loc>
-    <lastmod>2020-04-16</lastmod>
+    <loc>https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/</loc>
+    <lastmod>2020-05-23</lastmod>
   </url>  <url>
     <loc>https://helloworldztr.github.io/2020/04/09/Gitalk-register-and-use/</loc>
-    <lastmod>2020-04-09</lastmod>
+    <lastmod>2020-05-19</lastmod>
+  </url>  <url>
+    <loc>https://helloworldztr.github.io/2020/05/17/Create-pdf-in-macOS/</loc>
+    <lastmod>2020-05-19</lastmod>
+  </url>  <url>
+    <loc>https://helloworldztr.github.io/2020/03/10/Hackintosh-ATI-Driver/</loc>
+    <lastmod>2020-05-19</lastmod>
+  </url>  <url>
+    <loc>https://helloworldztr.github.io/2020/03/04/Static-Inject-in-Springboot/</loc>
+    <lastmod>2020-05-19</lastmod>
+  </url>  <url>
+    <loc>https://helloworldztr.github.io/2020/03/04/Change-Maven-in-Idea/</loc>
+    <lastmod>2020-05-19</lastmod>
+  </url>  <url>
+    <loc>https://helloworldztr.github.io/2020/05/17/Image-hosting-tips/</loc>
+    <lastmod>2020-05-17</lastmod>
   </url>  <url>
     <loc>https://helloworldztr.github.io/2020/04/08/WebSite-Build-instruction/</loc>
     <lastmod>2020-04-09</lastmod>
   </url>  <url>
     <loc>https://helloworldztr.github.io/2020/04/07/All-Black-Be-quite/</loc>
-    <lastmod>2020-04-08</lastmod>
-  </url>  <url>
-    <loc>https://helloworldztr.github.io/2020/03/04/Change-Maven-in-Idea/</loc>
-    <lastmod>2020-04-08</lastmod>
-  </url>  <url>
-    <loc>https://helloworldztr.github.io/2020/03/04/Static-Inject-in-Springboot/</loc>
     <lastmod>2020-04-08</lastmod>
   </url>
 </urlset>
