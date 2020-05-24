@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://helloworldztr.github.io/mc/index.html</loc>
+    
+    <lastmod>2020-05-24T04:45:45.090Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://helloworldztr.github.io/tools/index.html</loc>
+    
+    <lastmod>2020-05-24T04:44:45.713Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/</loc>
     
     <lastmod>2020-05-24T02:57:07.048Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>https://helloworldztr.github.io/mc/index.html</loc>
-    
-    <lastmod>2020-05-24T02:49:07.639Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://helloworldztr.github.io/pixelcalc/index.html</loc>
     
     <lastmod>2020-05-23T09:23:54.195Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://helloworldztr.github.io/tools/index.html</loc>
-    
-    <lastmod>2020-05-23T09:11:12.412Z</lastmod>
     
   </url>
   
