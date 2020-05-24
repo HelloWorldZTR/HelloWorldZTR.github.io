@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://helloworldztr.github.io/"/>
-  <updated>2020-05-23T07:24:47.940Z</updated>
+  <updated>2020-05-24T02:57:07.048Z</updated>
   <id>https://helloworldztr.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/"/>
     <id>https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/</id>
     <published>2020-05-23T06:53:04.000Z</published>
-    <updated>2020-05-23T07:24:47.940Z</updated>
+    <updated>2020-05-24T02:57:07.048Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://helloworldztr.github.io/mc/">https://helloworldztr.github.io/mc/</a></p><h2 id="要说的话"><a href="#要说的话" class="headerlink" title="要说的话"></a>要说的话</h2><ul><li>由于javascript效率不高，在处理<code>100*100</code>的图片时出现可见卡顿（1秒左右），<code>1000*1000</code>左右的图片半分钟到一两分钟左右（取决于浏览器及单核性能）</li><li>颜色有点鬼畜，等待进一步调整</li><li>水泥实际上就是羊毛换贴图，有空再写，现在没有用</li><li>考虑再加上一个颜色增强/校准功能</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://helloworldztr.github.io/mc/">https://helloworldztr.github.io/mc/</a></p><h2 id="要说的话"><a href="#要说的话" class="headerlink" title="要说的话"></a>要说的话</h2><ul><li>由于javascript效率不高，在处理<code>100*100</code>的图片时出现可见卡顿（1秒左右），<code>1000*1000</code>左右的图片半分钟到一两分钟左右（取决于浏览器及单核性能）</li><li>更新：在使用多线程后300*300一下无卡顿，主要是dom卡顿</li></ul><ul><li>颜色有点鬼畜，等待进一步调整（好点了）</li><li>水泥实际上就是羊毛换贴图，有空再写，现在没有用</li><li>考虑再加上一个颜色增强/校准功能（写好了）</li><li>进度条渲染不给力</li></ul><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>在单色图片上效果更好</p><p>加入图片后，调节阈值到合适的值，点确定就行，下面会随缘生成一个预览图（会非常大）；如果是建筑党的话可以点蓝图，照着蓝图撸建筑</p><p>蓝图格式：<br>n 行： 最高行<br>n-1 行： 次高行<br>…<br>1 行： 最下面一行 从左 -&gt; 至右</p>]]></content>
     
     <summary type="html">
     
