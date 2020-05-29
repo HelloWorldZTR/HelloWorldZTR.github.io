@@ -19,15 +19,15 @@
   
   
   <title>我的世界像素生成器使用指南 | HelloWorld</title>
-  <meta name="description" content="地址https:&#x2F;&#x2F;helloworldztr.github.io&#x2F;mc&#x2F; 要说的话 由于javascript效率不高，在处理100*100的图片时出现可见卡顿（1秒左右），1000*1000左右的图片半分钟到一两分钟左右（取决于浏览器及单核性能） 更新：在使用多线程后300*300一下无卡顿，主要是dom卡顿   颜色有点鬼畜，等待进一步调整（好点了） 水泥实际上就是羊毛换贴图，有空再写，现在没">
+  <meta name="description" content="地址https:&#x2F;&#x2F;helloworldztr.github.io&#x2F;mc&#x2F; Change Log0.1 基本功能0.1.0 基本功能0.1.1 修复色彩, canvas0.1.2 加入多线程，阈值0.1.3 Canvas 绘图优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的世界像素生成器使用指南">
 <meta property="og:url" content="https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/index.html">
 <meta property="og:site_name" content="HelloWorld">
-<meta property="og:description" content="地址https:&#x2F;&#x2F;helloworldztr.github.io&#x2F;mc&#x2F; 要说的话 由于javascript效率不高，在处理100*100的图片时出现可见卡顿（1秒左右），1000*1000左右的图片半分钟到一两分钟左右（取决于浏览器及单核性能） 更新：在使用多线程后300*300一下无卡顿，主要是dom卡顿   颜色有点鬼畜，等待进一步调整（好点了） 水泥实际上就是羊毛换贴图，有空再写，现在没">
+<meta property="og:description" content="地址https:&#x2F;&#x2F;helloworldztr.github.io&#x2F;mc&#x2F; Change Log0.1 基本功能0.1.0 基本功能0.1.1 修复色彩, canvas0.1.2 加入多线程，阈值0.1.3 Canvas 绘图优化">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-23T06:53:04.000Z">
-<meta property="article:modified_time" content="2020-05-24T02:57:07.048Z">
+<meta property="article:modified_time" content="2020-05-29T11:48:58.064Z">
 <meta property="article:author" content="HelloWorldZTR">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -195,7 +195,7 @@
   <div class="widget">
     <h3 class="widget-title">Categories</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/">Develop</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hackintosh/">Hackintosh</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PC-building/">PC building</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/">Develop</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hackintosh/">Hackintosh</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -205,7 +205,7 @@
   <div class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hackintosh/" rel="tag">Hackintosh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/" rel="tag">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PC-building/" rel="tag">PC building</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Website/" rel="tag">Website</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/translation/" rel="tag">translation</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Website/" rel="tag">Website</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -215,7 +215,7 @@
   <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Hackintosh/" style="font-size: 13px;">Hackintosh</a> <a href="/tags/Hardware/" style="font-size: 13px;">Hardware</a> <a href="/tags/PC-building/" style="font-size: 13px;">PC building</a> <a href="/tags/Website/" style="font-size: 14px;">Website</a> <a href="/tags/java/" style="font-size: 13.5px;">java</a> <a href="/tags/springboot/" style="font-size: 13px;">springboot</a> <a href="/tags/translation/" style="font-size: 13px;">translation</a>
+      <a href="/tags/Website/" style="font-size: 14px;">Website</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/springboot/" style="font-size: 13px;">springboot</a>
     </div>
   </div>
 
@@ -224,7 +224,7 @@
   <div class="widget">
     <h3 class="widget-title">Archive</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -326,7 +326,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">Catalogue</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#地址"><span class="toc-number">1.</span> <span class="toc-text">地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#要说的话"><span class="toc-number">2.</span> <span class="toc-text">要说的话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-number">3.</span> <span class="toc-text">使用方法</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#地址"><span class="toc-number">1.</span> <span class="toc-text">地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Change-Log"><span class="toc-number">2.</span> <span class="toc-text">Change Log</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-1-基本功能"><span class="toc-number">2.1.</span> <span class="toc-text">0.1 基本功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#0-1-0-基本功能"><span class="toc-number">2.1.1.</span> <span class="toc-text">0.1.0 基本功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0-1-1-修复色彩-canvas"><span class="toc-number">2.1.2.</span> <span class="toc-text">0.1.1 修复色彩, canvas</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0-1-2-加入多线程，阈值"><span class="toc-number">2.1.3.</span> <span class="toc-text">0.1.2 加入多线程，阈值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#0-1-3-Canvas-绘图优化"><span class="toc-number">2.1.4.</span> <span class="toc-text">0.1.3 Canvas 绘图优化</span></a></li></ol></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -372,7 +372,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/23/Pixel-gen-user-guide/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 246(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 46(words)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 1(minutes)</span>
@@ -383,20 +383,7 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <h2 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h2><p><a href="https://helloworldztr.github.io/mc/">https://helloworldztr.github.io/mc/</a></p>
-<h2 id="要说的话"><a href="#要说的话" class="headerlink" title="要说的话"></a>要说的话</h2><ul>
-<li>由于javascript效率不高，在处理<code>100*100</code>的图片时出现可见卡顿（1秒左右），<code>1000*1000</code>左右的图片半分钟到一两分钟左右（取决于浏览器及单核性能）</li>
-<li>更新：在使用多线程后300*300一下无卡顿，主要是dom卡顿</li>
-</ul>
-<ul>
-<li>颜色有点鬼畜，等待进一步调整（好点了）</li>
-<li>水泥实际上就是羊毛换贴图，有空再写，现在没有用</li>
-<li>考虑再加上一个颜色增强/校准功能（写好了）</li>
-<li>进度条渲染不给力</li>
-</ul>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>在单色图片上效果更好</p>
-<p>加入图片后，调节阈值到合适的值，点确定就行，下面会随缘生成一个预览图（会非常大）；如果是建筑党的话可以点蓝图，照着蓝图撸建筑</p>
-<p>蓝图格式：<br>n 行： 最高行<br>n-1 行： 次高行<br>…<br>1 行： 最下面一行 从左 -&gt; 至右</p>
-
+<h2 id="Change-Log"><a href="#Change-Log" class="headerlink" title="Change Log"></a>Change Log</h2><h3 id="0-1-基本功能"><a href="#0-1-基本功能" class="headerlink" title="0.1 基本功能"></a>0.1 基本功能</h3><h4 id="0-1-0-基本功能"><a href="#0-1-0-基本功能" class="headerlink" title="0.1.0 基本功能"></a>0.1.0 基本功能</h4><h4 id="0-1-1-修复色彩-canvas"><a href="#0-1-1-修复色彩-canvas" class="headerlink" title="0.1.1 修复色彩, canvas"></a>0.1.1 修复色彩, canvas</h4><h4 id="0-1-2-加入多线程，阈值"><a href="#0-1-2-加入多线程，阈值" class="headerlink" title="0.1.2 加入多线程，阈值"></a>0.1.2 加入多线程，阈值</h4><h4 id="0-1-3-Canvas-绘图优化"><a href="#0-1-3-Canvas-绘图优化" class="headerlink" title="0.1.3 Canvas 绘图优化"></a>0.1.3 Canvas 绘图优化</h4>
       
     </div>
     <div class="article-footer">

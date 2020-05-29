@@ -32,8 +32,8 @@ onmessage = function (message) {
                     best = i;
                 }
             }
-            list[best] = list[best] == null ? 0 : list[best] + 1;
-            col[x] = best;
+            list[blocks[best].id] = list[blocks[best].id] == null ? 0 : list[blocks[best].id] + 1;
+            col[x] = blocks[best].id;
             if (last == null) {
                 cnt++;
                 last = best;
