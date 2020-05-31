@@ -27,7 +27,7 @@
 <meta property="og:description" content="用于计算整个图片的像素平均值">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-23T09:11:35.000Z">
-<meta property="article:modified_time" content="2020-05-23T09:23:54.195Z">
+<meta property="article:modified_time" content="2020-05-30T06:10:40.306Z">
 <meta property="article:author" content="HelloWorldZTR">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -358,10 +358,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/pixelcalc/index.html#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 771(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 459(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 4(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2(minutes)</span>
 	
 
       </div>
@@ -452,24 +452,7 @@ div #result {
     var ctx;
     var idt;
     var img;
-    var wools = new Array(
-        new Wool('黑色', 0, 'https://i.loli.net/2020/05/23/LfWvgJ4QB6jixDX.png', new Array(20, 20, 20)),
-        new Wool('蓝色', 1, 'https://i.loli.net/2020/05/23/vKYTm3zPfOLZS6M.png', new Array(52, 56, 156)),
-        new Wool('棕色', 2, 'https://i.loli.net/2020/05/23/Zt8b2ikBEFHlarV.png', new Array(113, 71, 40)),
-        new Wool('青色', 3, 'https://i.loli.net/2020/05/23/Y8qQbOtZIe5Rp2l.png', new Array(21, 136, 144)),
-        new Wool('灰色', 4, 'https://i.loli.net/2020/05/23/Md9TVqx3ybUgEKf.png', new Array(63, 68, 71)),
-        new Wool('绿色', 5, 'https://i.loli.net/2020/05/23/OYzkALha98VdgSW.png', new Array(84, 109, 27)),
-        new Wool('淡蓝色', 6, 'https://i.loli.net/2020/05/23/WnIYFBsGj138xai.png', new Array(58, 177, 218)),
-        new Wool('淡灰色', 7, 'https://i.loli.net/2020/05/23/715JZIlmOd6boNM.png', new Array(142, 143, 135)),
-        new Wool('黄绿色', 8, 'https://i.loli.net/2020/05/23/uGvEfnO3KBSsgHT.png', new Array(111, 184, 25)),
-        new Wool('洋红色', 9, 'https://i.loli.net/2020/05/23/dNPcp2SWwAUQH1R.png', new Array(190, 69, 180)),
-        new Wool('橙色', 10, 'https://i.loli.net/2020/05/23/L7P2aZ9hkj4Qcox.png', new Array(241, 119, 20)),
-        new Wool('粉色', 11, 'https://i.loli.net/2020/05/23/qDiNEI1Jhv6YBgC.png', new Array(238, 139, 171)),
-        new Wool('紫色', 12, 'https://i.loli.net/2020/05/23/4L5MKaTnBRFYywf.png', new Array(119, 40, 170)),
-        new Wool('红色', 13, 'https://i.loli.net/2020/05/23/lwVCI5R8ZPHzqxt.png', new Array(160, 39, 34)),
-        new Wool('白色', 14, 'https://i.loli.net/2020/05/23/4dr5iqu36aZGbsy.png', new Array(255, 255, 255)),
-        new Wool('黄色', 15, 'https://i.loli.net/2020/05/23/alwkYHR4z2oLWuJ.png', new Array(248, 196, 37))
-    )
+
     $(function () {
         // Clear event
         $('.image-preview-clear').click(function () {
@@ -544,7 +527,7 @@ div #result {
                 <div class="btn btn-default image-preview-input">
                     <span class="glyphicon glyphicon-folder-open"></span>
                     <span class="image-preview-input-title">Browse</span>
-                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" multiple=“multiple”/>
                 </div>
             </span>
         </div>
