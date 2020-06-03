@@ -26,7 +26,20 @@ onmessage = function (message) {
             var best = 0;
             for (var i = 0; i < blocks.length; i++) {
                 var tempRGB = blocks[i].rgb;
-                var tempDiff = Math.abs(tempRGB[0] - pixel[0]) + Math.abs(tempRGB[1] - pixel[1]) + Math.abs(tempRGB[2] - pixel[2]);
+                var r1=pixel[0], g1 = pixel[1], b1 = pixel[2];
+                var r2=tempRGB[0], g2=tempRGB[1],b2 = tempRGB[2];
+                var rmean = (r1+r2)/2;
+                var deltaR = r1-r2,
+                    deltaG = g1-g2,
+                    deltaB = b1-b2;
+                var tempDiff = Math.sqrt(
+                    (2+rmean/256)*(deltaR*deltaR)
+                    +
+                    4*(deltaG*deltaG)
+                    +
+                    (2+(255-rmean)/256)*(deltaB*deltaB)
+                    );
+                // var tempDiff = Math.abs(tempRGB[0] - pixel[0]) + Math.abs(tempRGB[1] - pixel[1]) + Math.abs(tempRGB[2] - pixel[2]);
                 if (tempDiff < diff) {
                     diff = tempDiff;
                     best = i;
