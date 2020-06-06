@@ -5,7 +5,7 @@ onmessage = function (message) {
     var idt = data.idt;
     var blocks = data.blc;
     var list = new Array();
-    var bp = "顺序：自下而上，自左至右\n"
+    var bp = "顺序：自下而上，自左至右\n";
     var row = new Array();
     this.console.log(data);
     for (var y = 0; y < height; y++) {
@@ -15,6 +15,7 @@ onmessage = function (message) {
                 terminate: false,
                 per: percent
             });
+            this.console.log('当前进度:'+percent+'%')
         }
         var info = "第" + (height - y) + "行: ";
         var col = new Array();

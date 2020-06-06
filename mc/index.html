@@ -22,19 +22,19 @@
   <meta name="description" content="一个用来快速将图片转换为我的世界像素画的工具">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Minecraft 像素画转换器">
-<meta property="og:url" content="http://hiztr.cn/mc/index.html">
+<meta property="og:url" content="https://hiztr.cn/mc/index.html">
 <meta property="og:site_name" content="HelloWorld">
 <meta property="og:description" content="一个用来快速将图片转换为我的世界像素画的工具">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-23T03:03:49.000Z">
-<meta property="article:modified_time" content="2020-06-03T13:33:23.970Z">
+<meta property="article:modified_time" content="2020-06-06T01:53:15.782Z">
 <meta property="article:author" content="HelloWorldZTR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="computer">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://hiztr.cn/mc/index.html">
+  <link rel="canonical" href="https://hiztr.cn/mc/index.html">
   
     <link rel="alternate" href="/atom.xml" title="HelloWorld" type="application/atom+xml">
   
@@ -53,7 +53,7 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 
-<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+<body class="main-center no-sidebar" itemscope itemtype="http://schema.org/WebPage">
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
@@ -380,15 +380,12 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!--图片上传css-->
 <style>
+    .container {
+        margin-top: 20px;
+    }
 
 
-
-<pre><code>.container {
-    margin-top: 20px;
-}
-
-
-.image-preview-input {
+<pre><code>.image-preview-input {
     position: relative;
     overflow: hidden;
     margin: 0px;
@@ -436,13 +433,13 @@ canvas {
 <!--js核心代码-->
 <script>
     /**
-    * [thresholdConvert 阈值处理]
-    * @param  {[type]} ctx       [description]
-    * @param  {[type]} imageData [description]
-    * @param  {[type]} threshold [阈值]
-    * @param  {[type]} mode      [模式：0：彩色，1：黑白]
-    * @return {[type]}           [description]
-    */
+     * [thresholdConvert 阈值处理]
+     * @param  {[type]} ctx       [description]
+     * @param  {[type]} imageData [description]
+     * @param  {[type]} threshold [阈值]
+     * @param  {[type]} mode      [模式：0：彩色，1：黑白]
+     * @return {[type]}           [description]
+     */
     function thresholdConvert(ctx, imageData, threshold, mode) {
         var data = imageData.data;
         for (var i = 0; i < data.length; i += 4) {
@@ -453,21 +450,24 @@ canvas {
             // 灰度计算公式
             var gray = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
             var color = gray >= threshold ? 255 : 0;
-            data[i] = (mode == 0 && color == 0) ? red : color;    // red
-            data[i + 1] = (mode == 0 && color == 0) ? green : color;  // green
-            data[i + 2] = (mode == 0 && color == 0) ? blue : color;   // blue
-            data[i + 3] = alpha >= threshold ? 255 : 0;               // 去掉透明
+            data[i] = (mode == 0 && color == 0) ? red : color; // red
+            data[i + 1] = (mode == 0 && color == 0) ? green : color; // green
+            data[i + 2] = (mode == 0 && color == 0) ? blue : color; // blue
+            data[i + 3] = alpha >= threshold ? 255 : 0; // 去掉透明
         }
         ctx.putImageData(imageData, 0, 0);
     };
     // 魔法®
     function getPixel(imgData, index) {
-        var i = index * 4, d = imgData.data;
+        var i = index * 4,
+            d = imgData.data;
         return [d[i], d[i + 1], d[i + 2], d[i + 3]] // [R,G,B,A]
     }
+
     function getPixelXY(imgData, x, y) {
         return getPixel(imgData, y * imgData.width + x);
     }
+
     function Block(name, id, src, rgb) {
         this.name = name;
         this.id = id;
@@ -493,12 +493,14 @@ canvas {
             }
         );
     });
-    var width;  //现在的宽度
+    var width; //现在的宽度
     var height; //现在的高度
-    var cvs;    //预览canvas
-    var ctx;    //cvs的content
-    var idt;    //content的imagedata
-    var img;    //原始Image
+    var final_width;
+    var final_height;
+    var cvs; //预览canvas
+    var ctx; //cvs的content
+    var idt; //content的imagedata
+    var img; //原始Image
     //方块字典
     var blocks = new Array(
         new Block('黑色羊毛', 0, 'https://i.loli.net/2020/05/23/LfWvgJ4QB6jixDX.png', new Array(20, 21, 25)),
@@ -570,7 +572,8 @@ canvas {
             var cell2 = document.createElement('td');
             cell2.innerHTML = item.name;
             var cell3 = document.createElement('td');
-            var image = new Image(); image.src = item.src;
+            var image = new Image();
+            image.src = item.src;
             cell3.appendChild(image);
             row.appendChild(cell0);
             row.appendChild(cell1);
@@ -585,7 +588,7 @@ canvas {
             // row = this.children[i];
             var id = Number(row.children[1].innerText);
             var checkbox = row.children[0].children[0];
-            console.log(id + checkbox);
+            // console.log(id + checkbox);
             if (id >= 0 && id <= 15)
                 checkbox.checked = true;
         });
@@ -593,8 +596,7 @@ canvas {
             if ($('#woolModalAll').prop('checked')) {
                 $('.selector1').prop('checked', true);
                 $('.follow-selector1').prop('checked', true);
-            }
-            else {
+            } else {
                 $('.selector1').removeProp('checked');
                 $('.follow-selector1').prop('checked', false);
             }
@@ -616,8 +618,7 @@ canvas {
                     if (id >= 0 && id <= 15)
                         checkbox.checked = true;
                 });
-            }
-            else {
+            } else {
                 $('#woolTable').find('tr').each(function () {
                     var row = this;
                     // for (var i = 0; i <= 15; i++) {
@@ -645,8 +646,7 @@ canvas {
                     if (id >= 16 && id <= 31)
                         checkbox.checked = true;
                 });
-            }
-            else {
+            } else {
                 $('#woolTable').find('tr').each(function () {
                     var row = this;
                     // for (var i = 0; i <= 15; i++) {
@@ -674,7 +674,8 @@ canvas {
             var cell2 = document.createElement('td');
             cell2.innerHTML = item.name;
             var cell3 = document.createElement('td');
-            var image = new Image(); image.src = item.src;
+            var image = new Image();
+            image.src = item.src;
             cell3.appendChild(image);
             row.appendChild(cell0);
             row.appendChild(cell1);
@@ -689,8 +690,7 @@ canvas {
             if ($('#allModalAll').prop('checked')) {
                 $('.selector2').prop('checked', true);
                 $('.follow-selector2').prop('checked', true);
-            }
-            else {
+            } else {
                 $('.selector2').removeProp('checked');
                 $('.follow-selector2').prop('checked', false);
             }
@@ -707,8 +707,7 @@ canvas {
                     if (id >= 0 && id <= 15)
                         checkbox.checked = true;
                 });
-            }
-            else {
+            } else {
                 $('#allTable').find('tr').each(function () {
                     var row = this;
                     // for (var i = 0; i <= 15; i++) {
@@ -736,8 +735,7 @@ canvas {
                     if (id >= 16 && id <= 31)
                         checkbox.checked = true;
                 });
-            }
-            else {
+            } else {
                 $('#allTable').find('tr').each(function () {
                     var row = this;
                     // for (var i = 0; i <= 15; i++) {
@@ -763,6 +761,8 @@ canvas {
         });
         // Create the preview image
         $(".image-preview-input input:file").change(function () {
+            console.log('📄开始载入图像...')
+
             img = $('img#preview')[0];
             var file = this.files[0];
             var reader = new FileReader();
@@ -795,12 +795,14 @@ canvas {
                 document.getElementById('width').value = width;
                 document.getElementById('height').value = height;
                 $('#DEBUG').append(cvs);
-                // TODO::PROCCESS IMAGE
-                // doImage();
                 changeThs();
+                adjustRenderLevel();
+
+                console.log('载入图像完成✅')
             }
         });
     });
+
     function getCostomBlockInfo() {
         customBlocks1.length = 0;
         customBlocks2.length = 0;
@@ -826,34 +828,46 @@ canvas {
     }
     var customBlocks1 = new Array();
     var customBlocks2 = new Array();
+
     function doImage() {
-        console.log("开始处理图像");
+        console.log("📄开始处理图像...");
         var img = $('img#preview')[0];
         var width = Number(document.getElementById('width').value);
         var height = Number(document.getElementById('height').value);
-        var material;
+        var material; // 0:羊毛 1:全物品
+        var render_level;
+        var hasPreview = true;
+
+        $('#render_level input[name="anti"]').each(function () {
+            if (this.checked) {
+                render_level = Number(this.value);
+            }
+        });
         if (document.getElementById('Block').checked) {
             material = 0;
-        }
-        else {
+        } else {
             material = 1;
         }
-        console.log(width);
-        console.log(height);
-        console.log(material);
+
+        console.log('宽度:' + width);
+        console.log('高度:' + height);
+        console.log('材料:' + material == 0 ? '羊毛' : '全物品');
+        console.log('渲染等级:' + render_level);
+
         if (width == 0 || height == 0) {
             window.alert("不合法的宽高")
-        }
-        else if (material > 1 || material < 0) {
+        } else if (material > 1 || material < 0) {
             window.alert("不合法的类型")
+        } else if (width >= 300 || height >= 300) {
+            window.alert("尺寸过大，将不会渲染预览");
+            hasPreview = false;
         }
         // cvs = document.createElement('canvas');
         // cvs.height = height;
         // cvs.width = width;
         // ctx = cvs.getContext('2d');
         // ctx.drawImage(img, 0, 0, width, height);
-        // idt = ctx.getImageData(0, 0, width, height);
-        // TODO::delete this
+        // idt = ctx.getImageData(0, 0, width, height);zs
         // $('#DEBUG').append(cvs);
         // var result = document.createElement('div');
         // result.id = 'result';
@@ -861,21 +875,22 @@ canvas {
         $('#pg').attr("style", 'width: 0%');
         getCostomBlockInfo();
         var worker = new Worker("/js/mc/worker.js");
-        if (material == 0) {//羊毛
+        if (material == 0) { //羊毛
             var msg = {
                 h: height,
                 w: width,
                 blc: customBlocks1,
-                idt: idt
+                idt: idt,
+                render_level: render_level
             };
             worker.postMessage(msg);
-        }
-        else {//全物品
+        } else { //全物品
             var msg = {
                 h: height,
                 w: width,
                 blc: customBlocks2,
-                idt: idt
+                idt: idt,
+                render_level: render_level
             };
             worker.postMessage(msg);
         }
@@ -896,44 +911,43 @@ canvas {
                 //     document.getElementById('result').appendChild(document.createElement('br'));
                 // }
                 var row = data.row;
-                var OFFSET = 16;//16px
+                var OFFSET = 16; //16px
                 var rescvs_ = $('.result-canvas1')[0];
                 var rescvs = document.createElement('canvas');
                 rescvs.className = 'result-canvas1';
                 rescvs.width = row.length * OFFSET;
                 rescvs.height = row[0].length * OFFSET;
                 var resctx = rescvs.getContext('2d');
-                if ($('#Block').prop('checked')) {
-                    //羊毛模式
-                    for (var i = 0; i < row.length; i++) {
-                        var col = row[i];
-                        for (var j = 0; j < col.length; j++) {
-                            var src = blocks[col[j]].src;
-                            var image = new Image(OFFSET, OFFSET);
-                            image.src = src;
-                            resctx.drawImage(image, j * OFFSET, i * OFFSET);
+                if (hasPreview) {   //只渲染小尺寸图像
+                    if ($('#Block').prop('checked')) {
+                        //羊毛模式
+                        for (var i = 0; i < row.length; i++) {
+                            var col = row[i];
+                            for (var j = 0; j < col.length; j++) {
+                                var src = blocks[col[j]].src;
+                                var image = new Image(OFFSET, OFFSET);
+                                image.src = src;
+                                resctx.drawImage(image, j * OFFSET, i * OFFSET);
+                            }
                         }
-                    }
-                    $('#result-box-inner')[0].removeChild(rescvs_);
-                    $('#history-result')[0].appendChild(rescvs_);
-                    // 
-                    $('#result-box-inner')[0].appendChild(rescvs);
-                }
-                else {
-                    //普通模式
-                    for (var i = 0; i < row.length; i++) {
-                        var col = row[i];
-                        for (var j = 0; j < col.length; j++) {
-                            var src = blocks2[col[j]].src;
-                            var image = new Image(OFFSET, OFFSET);
-                            image.src = src;
-                            resctx.drawImage(image, j * OFFSET, i * OFFSET);
+                        $('#result-box-inner')[0].removeChild(rescvs_);
+                        $('#history-result')[0].appendChild(rescvs_);
+                        $('#result-box-inner')[0].appendChild(rescvs);
+                    } else {
+                        //普通模式
+                        for (var i = 0; i < row.length; i++) {
+                            var col = row[i];
+                            for (var j = 0; j < col.length; j++) {
+                                var src = blocks2[col[j]].src;
+                                var image = new Image(OFFSET, OFFSET);
+                                image.src = src;
+                                resctx.drawImage(image, j * OFFSET, i * OFFSET);
+                            }
                         }
+                        $('#result-box-inner')[0].removeChild(rescvs_)
+                        $('#history-result')[0].appendChild(rescvs_);
+                        $('#result-box-inner')[0].appendChild(rescvs);
                     }
-                    $('#result-box-inner')[0].removeChild(rescvs_)
-                    $('#history-result')[0].appendChild(rescvs_);
-                    // 
-                    $('#result-box-inner')[0].appendChild(rescvs);
                 }
                 //绘制蓝图及物料清单
                 var bp = data.bp;
@@ -942,6 +956,7 @@ canvas {
                 for (var i = 0; i < data.list.length; i++) {
                     if (data.list[i] != null) {
                         var row = document.createElement('tr');
+
                         var name = blocks[i].name;
                         var cnt = data.list[i];
                         var cell0 = document.createElement('td');
@@ -952,20 +967,22 @@ canvas {
                         cell1.innerHTML = name;
                         var cell2 = document.createElement('td');
                         cell2.innerHTML = cnt;
+
                         row.appendChild(cell0);
                         row.appendChild(cell1);
                         row.appendChild(cell2);
+
                         document.getElementById('list-inner').appendChild(row);
                     }
                 }
                 $("#pgModal").modal("hide");
                 worker.terminate();
-            }
-            else {
+            } else {
                 var data = message.data;
                 var per = data.per;
                 $('#pg').attr("style", 'width:' + per + '%');
             }
+            console.log('图像处理完成✅');
         }
         worker.onerror = function (error) {
             console.log(error.filename, error.lineno, error.message);
@@ -1039,12 +1056,15 @@ canvas {
         $('#height').attr('value', origin_height).val(origin_height);
         $('#Block').attr('checked', true);
         $('#ths').attr('value', 200).val(200);
+        $('#1x').prop('checked', true);
         width = origin_width;
         height = origin_height;
         ctx.drawImage(img, 0, 0, width, height);
         idt = ctx.getImageData(0, 0, width, height);
         changeThs();
+        adjustRenderLevel();
     }
+
     function adjustHeight() {
         if (document.getElementById('lock_ratio').checked) {
             var tempWidth = Number(document.getElementById('width').value);
@@ -1061,6 +1081,7 @@ canvas {
             changeThs();
         }
     }
+
     function adjustWidth() {
         if (document.getElementById('lock_ratio').checked) {
             var tempHeight = Number(document.getElementById('height').value);
@@ -1077,11 +1098,24 @@ canvas {
             changeThs();
         }
     }
-    function test() {
-        getCostomBlockInfo();
-        console.log(customBlocks1);
-        console.log(customBlocks2);
+
+    function adjustRenderLevel() {
+        var render_level;
+        $('#render_level input[name="anti"]').each(function() {
+            if( this.checked) {
+                render_level = Number(this.value);
+            }
+        });
+        final_height = height*render_level;
+        final_width = width*render_level;
+        $('#rendv')[0].innerHTML = '最终尺寸:'+final_width+'*'+final_height;
     }
+    // function test() {
+    //     getCostomBlockInfo();
+    //     console.log(customBlocks1);
+    //     console.log(customBlocks2);
+    // }
+
     function changeThs() {
         document.getElementById('DEBUG').removeChild(cvs);
         cvs = document.createElement('canvas');
@@ -1103,8 +1137,7 @@ canvas {
         //  console.log(isWool);
         if (isWool) {
             $('#woolModal').modal('show');
-        }
-        else {
+        } else {
             $('#allModal').modal('show');
         }
     }
@@ -1159,19 +1192,21 @@ canvas {
             </div>
             <div class="col-xs-6 col-sm-6 col-lg-12">
                 <h3>抗锯齿</h3>
-                <label>
+                <label id="render_level">
                     <p>此功能开发中</p>
-                    <input id="1x" name="anti" type="radio" value="0" checked> 无&nbsp;
-                    <input id="2x" name="anti" type="radio" disabled="true">2x&nbsp;
-                    <input id="4x" name="anti" type="radio" disabled="true">4x&nbsp;
-                    <input id="8x" name="anti" type="radio" disabled="true">8x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="1x" name="anti" type="radio" value="1" checked> 无&nbsp;
+                    <input onchange="adjustRenderLevel()" id="2x" name="anti" type="radio" value="2"> 2x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="4x" name="anti" type="radio" value="4"> 4x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="8x" name="anti" type="radio" value="8"> 8x&nbsp;
                 </label>
+                <p id="rendv"></p>
                 <h3>阈值</h3>
                 <label>
                     <input type="range" name="slider-1" id="ths" min="0" max="255" step="1" value="200"
                         onchange="changeThs()">
                     <input id="blackwhite" type="checkbox" onchange="changeThs()">&nbsp;黑白模式
-                </label><p id="thsv"></p>
+                </label>
+                <p id="thsv"></p>
             </div>
             <!--右-->
         </div>
@@ -1357,7 +1392,7 @@ canvas {
     
     <li class="post-copyright-link hidden-xs">
       <strong>Link Addr：</strong>
-      <a href="http://hiztr.cn/mc/index.html" title="Minecraft 像素画转换器" target="_blank" rel="external">http://hiztr.cn/mc/index.html</a>
+      <a href="https://hiztr.cn/mc/index.html" title="Minecraft 像素画转换器" target="_blank" rel="external">https://hiztr.cn/mc/index.html</a>
     </li>
     
     <li class="post-copyright-license">
