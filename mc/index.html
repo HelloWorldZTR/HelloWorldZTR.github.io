@@ -27,7 +27,7 @@
 <meta property="og:description" content="一个用来快速将图片转换为我的世界像素画的工具">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-23T03:03:49.000Z">
-<meta property="article:modified_time" content="2020-06-06T03:58:56.969Z">
+<meta property="article:modified_time" content="2020-06-08T11:47:47.140Z">
 <meta property="article:author" content="HelloWorldZTR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
@@ -361,17 +361,17 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/mc/index.html#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 1.5k(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 1.6k(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 8(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 9(minutes)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>一个用来快速将图片转换为我的世界像素画的工具</p>
+        <p>一个用来快速将图片转换为我的世界像素画的工具<br>使用前必读： <a href="https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/" target="_blank" rel="noopener">https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/</a></p>
 <a id="more"></a>
 <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -468,18 +468,22 @@ canvas {
         return getPixel(imgData, y * imgData.width + x);
     }
 
-    function Block(name, id, src, rgb) {
-        this.name = name;
-        this.id = id;
-        this.src = src;
-        this.rgb = rgb;
-        // this.getName = function () { return this.name; }
-        // this.getId = function () { return this.id; }
-        // this.getSrc = function () { return this.src; }
-        // this.getRGB = function () { return this.rgb; }
-        // this.getImage = function () {
-        //     return new Image().src = this.src;
-        // }
+    // function Block(name, id, src, rgb) {
+    //     this.name = name;
+    //     this.id = id;
+    //     this.src = src;
+    //     this.rgb = rgb;
+    //     // this.getName = function () { return this.name; }
+    //     // this.getId = function () { return this.id; }
+    //     // this.getSrc = function () { return this.src; }
+    //     // this.getRGB = function () { return this.rgb; }
+    //     // this.getImage = function () {
+    //     //     return new Image().src = this.src;
+    //     // }
+    // }
+
+    function Block(mcn, name, id, src, rgb) {
+        this.mcn = mcn, this.name = name, this.id = id, this.src = src, this.rgb = rgb;
     }
     $(document).on('click', '#close-preview', function () {
         $('.image-preview').popover('hide');
@@ -501,24 +505,25 @@ canvas {
     var ctx; //cvs的content
     var idt; //content的imagedata
     var img; //原始Image
+    var filename;
     //方块字典
     var blocks = new Array(
-        new Block('黑色羊毛', 0, 'https://i.loli.net/2020/05/23/LfWvgJ4QB6jixDX.png', new Array(20, 21, 25)),
-        new Block('蓝色羊毛', 1, 'https://i.loli.net/2020/05/23/vKYTm3zPfOLZS6M.png', new Array(53, 57, 157)),
-        new Block('棕色羊毛', 2, 'https://i.loli.net/2020/05/23/Zt8b2ikBEFHlarV.png', new Array(113, 71, 40)),
-        new Block('青色羊毛', 3, 'https://i.loli.net/2020/05/23/Y8qQbOtZIe5Rp2l.png', new Array(21, 136, 144)),
-        new Block('灰色羊毛', 4, 'https://i.loli.net/2020/05/23/Md9TVqx3ybUgEKf.png', new Array(63, 68, 71)),
-        new Block('绿色羊毛', 5, 'https://i.loli.net/2020/05/23/OYzkALha98VdgSW.png', new Array(84, 109, 27)),
-        new Block('淡蓝色羊毛', 6, 'https://i.loli.net/2020/05/23/WnIYFBsGj138xai.png', new Array(58, 175, 218)),
-        new Block('淡灰色羊毛', 7, 'https://i.loli.net/2020/05/23/715JZIlmOd6boNM.png', new Array(142, 143, 135)),
-        new Block('黄绿色羊毛', 8, 'https://i.loli.net/2020/05/23/uGvEfnO3KBSsgHT.png', new Array(111, 184, 25)),
-        new Block('洋红色羊毛', 9, 'https://i.loli.net/2020/05/23/dNPcp2SWwAUQH1R.png', new Array(190, 69, 180)),
-        new Block('橙色羊毛', 10, 'https://i.loli.net/2020/05/23/L7P2aZ9hkj4Qcox.png', new Array(241, 119, 20)),
-        new Block('粉色羊毛', 11, 'https://i.loli.net/2020/05/23/qDiNEI1Jhv6YBgC.png', new Array(238, 141, 171)),
-        new Block('紫色羊毛', 12, 'https://i.loli.net/2020/05/23/4L5MKaTnBRFYywf.png', new Array(119, 40, 170)),
-        new Block('红色羊毛', 13, 'https://i.loli.net/2020/05/23/lwVCI5R8ZPHzqxt.png', new Array(160, 39, 34)),
-        new Block('白色羊毛', 14, 'https://i.loli.net/2020/05/23/4dr5iqu36aZGbsy.png', new Array(255, 255, 255)),
-        new Block('黄色羊毛', 15, 'https://i.loli.net/2020/05/23/alwkYHR4z2oLWuJ.png', new Array(248, 196, 39)),
+        new Block('carpet 15', '黑色羊毛', 0, 'https://i.loli.net/2020/05/23/LfWvgJ4QB6jixDX.png', new Array(20, 21,25)),
+        new Block('carpet 11', '蓝色羊毛', 1, 'https://i.loli.net/2020/05/23/vKYTm3zPfOLZS6M.png', new Array(53, 57,157)),
+        new Block('carpet 12', '棕色羊毛', 2, 'https://i.loli.net/2020/05/23/Zt8b2ikBEFHlarV.png', new Array(113, 71,40)),
+        new Block('carpet 9', '青色羊毛', 3, 'https://i.loli.net/2020/05/23/Y8qQbOtZIe5Rp2l.png', new Array(21, 136,144)),
+        new Block('carpet 7', '灰色羊毛', 4, 'https://i.loli.net/2020/05/23/Md9TVqx3ybUgEKf.png', new Array(63, 68,71)),
+        new Block('carpet 13', '绿色羊毛', 5, 'https://i.loli.net/2020/05/23/OYzkALha98VdgSW.png', new Array(84, 109,27)),
+        new Block('carpet 3', '淡蓝色羊毛', 6, 'https://i.loli.net/2020/05/23/WnIYFBsGj138xai.png', new Array(58, 175, 218)),
+        new Block('carpet 8', '淡灰色羊毛', 7, 'https://i.loli.net/2020/05/23/715JZIlmOd6boNM.png', new Array(142, 143, 135)),
+        new Block('carpet 5', '黄绿色羊毛', 8, 'https://i.loli.net/2020/05/23/uGvEfnO3KBSsgHT.png', new Array(111,184, 25)),
+        new Block('carpet 2', '洋红色羊毛', 9, 'https://i.loli.net/2020/05/23/dNPcp2SWwAUQH1R.png', new Array(190,69, 180)),
+        new Block('carpet 1', '橙色羊毛', 10, 'https://i.loli.net/2020/05/23/L7P2aZ9hkj4Qcox.png', new Array(241,119, 20)),
+        new Block('carpet 6', '粉色羊毛', 11, 'https://i.loli.net/2020/05/23/qDiNEI1Jhv6YBgC.png', new Array(238,141, 171)),
+        new Block('carpet 10', '紫色羊毛', 12, 'https://i.loli.net/2020/05/23/4L5MKaTnBRFYywf.png', new Array(119,40, 170)),
+        new Block('carpet 14', '红色羊毛', 13, 'https://i.loli.net/2020/05/23/lwVCI5R8ZPHzqxt.png', new Array(160, 39,34)),
+        new Block('carpet 0', '白色羊毛', 14, 'https://i.loli.net/2020/05/23/4dr5iqu36aZGbsy.png', new Array(255,255, 255)),
+        new Block('carpet 4', '黄色羊毛', 15, 'https://i.loli.net/2020/05/23/alwkYHR4z2oLWuJ.png', new Array(248,196, 39)),
         new Block('黑色混凝土', 16, 'https://i.loli.net/2020/05/30/dkTE5j7XK12e6BW.png'),
         new Block('蓝色混凝土', 17, 'https://i.loli.net/2020/05/30/i6oCbhxFtZ5uYMG.png'),
         new Block('棕色混凝土', 18, 'https://i.loli.net/2020/05/30/bIkgBhsDm7H59Ki.png'),
@@ -765,6 +770,7 @@ canvas {
 
             img = $('img#preview')[0];
             var file = this.files[0];
+            filename = file.name;
             var reader = new FileReader();
             // Set preview image into the popover data-content
             reader.onload = function (e) {
@@ -932,7 +938,8 @@ canvas {
                                         var src = bld.src;
                                         var image = new Image(OFFSET, OFFSET);
                                         image.src = src;
-                                        resctx.drawImage(image, j*OFFSET*render_level+b*OFFSET, i*OFFSET*render_level+a*OFFSET)
+                                        resctx.drawImage(image, j * OFFSET * render_level + b * OFFSET, i * OFFSET *
+                                            render_level + a * OFFSET)
                                     }
                                 }
                             }
@@ -982,14 +989,17 @@ canvas {
                         document.getElementById('list-inner').appendChild(row);
                     }
                 }
+                var mcfuntion = data.mcfunction;
+                download("download", filename+".mcfunction",mcfuntion);
+                download("download_bp", filename+".txt", bp);
                 $("#pgModal").modal("hide");
                 worker.terminate();
+                console.log('图像处理完成✅');
             } else {
                 var data = message.data;
                 var per = data.per;
                 $('#pg').attr("style", 'width:' + per + '%');
             }
-            console.log('图像处理完成✅');
         }
         worker.onerror = function (error) {
             console.log(error.filename, error.lineno, error.message);
@@ -1150,6 +1160,19 @@ canvas {
             $('#allModal').modal('show');
         }
     }
+
+    function download(id, filename, text) {
+        var element = document.getElementById(id);
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        // element.style.display = 'none';
+        // document.body.appendChild(element);
+
+        // element.click();
+
+        // document.body.removeChild(element);
+    }
 </script>
 <div class="row clearfix">
     <!--左栏-->
@@ -1203,10 +1226,11 @@ canvas {
                 <h3>像素大小</h3>
                 <label id="render_level">
                     <p>即输入图片中的1像素等于几个方块</p>
-                    <input onchange="adjustRenderLevel()" id="1x" name="anti" type="radio" value="1" checked> 1x&nbsp;
-                    <input onchange="adjustRenderLevel()" id="2x" name="anti" type="radio" value="2"> 2x&nbsp;
-                    <input onchange="adjustRenderLevel()" id="4x" name="anti" type="radio" value="4"> 4x&nbsp;
-                    <input onchange="adjustRenderLevel()" id="8x" name="anti" type="radio" value="8"> 8x&nbsp;
+                    <p>有点卡，正在优化中...</p>
+                    <input onchange="adjustRenderLevel()" id="1x" name="anti" type="radio" value="1"> 1x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="2x" name="anti" type="radio" value="2" checked> 2x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="4x" name="anti" type="radio" value="4" disabled> 4x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="8x" name="anti" type="radio" value="8" disabled> 8x&nbsp;
                 </label>
                 <p id="rendv"></p>
                 <h3>阈值</h3>
@@ -1226,7 +1250,12 @@ canvas {
         <!-- &nbsp;
         <button id="btn_test" class="btn btn-default" onclick="test()">Test</button> -->
         &nbsp;
+        <a id="download" class="btn btn-default">下载指令文件</a>
+        &nbsp;
         <button class="btn btn-default" data-toggle="modal" data-target="#myModal">蓝图</button>
+        <br><br>
+        <p>指令文件使用方法？</p>
+        <small>请百度'我的世界 function 来获得更多信息（我将来也会详细介绍）'</small>
         <!-- </form> -->
     </div>
 </div>
@@ -1255,11 +1284,13 @@ canvas {
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">蓝图</h4>
+                <p>其实就是手稿一样的东西，如果实在是不会指令的话也可以用</p>
             </div>
             <div class="modal-body">
                 <textarea id="blueprint" style="width: 100%;"></textarea>
             </div>
             <div class="modal-footer">
+                <a id="download_bp" type="button" class="btn btn-default">下载</a>
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
             </div>
@@ -1267,7 +1298,7 @@ canvas {
     </div><!-- /.modal -->
 </div>
 
-<!-- 进度狂 -->
+<!-- 进度框 -->
 <div id="pgModal" class="modal fade" tabindex="-2" role="dialog" aria-labelledby="pgModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -1394,7 +1425,7 @@ canvas {
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
 
-<h4 id="使用前必读：-https-helloworldztr-github-io-2020-05-23-Pixel-gen-user-guide"><a href="#使用前必读：-https-helloworldztr-github-io-2020-05-23-Pixel-gen-user-guide" class="headerlink" title="使用前必读： https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/"></a>使用前必读： <a href="https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/" target="_blank" rel="noopener">https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/</a></h4><h4 id="作者：HelloWorldZTR"><a href="#作者：HelloWorldZTR" class="headerlink" title="作者：HelloWorldZTR"></a>作者：HelloWorldZTR</h4>
+<h4 id="作者：HelloWorldZTR"><a href="#作者：HelloWorldZTR" class="headerlink" title="作者：HelloWorldZTR"></a>作者：HelloWorldZTR</h4>
       
     </div>
     <div class="article-footer">

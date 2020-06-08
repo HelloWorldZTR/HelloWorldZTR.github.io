@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hiztr.cn/2020/05/23/Pixel-gen-user-guide/</loc>
+    <lastmod>2020-06-08</lastmod>
+  </url>  <url>
     <loc>https://hiztr.cn/2020/04/08/WebSite-Build-instruction/</loc>
     <lastmod>2020-06-05</lastmod>
   </url>  <url>
     <loc>https://hiztr.cn/2020/06/01/Static-website-build-insturction/</loc>
-    <lastmod>2020-06-05</lastmod>
-  </url>  <url>
-    <loc>https://hiztr.cn/2020/05/23/Pixel-gen-user-guide/</loc>
     <lastmod>2020-06-05</lastmod>
   </url>  <url>
     <loc>https://hiztr.cn/2020/03/04/Make_a_gui_in_java/</loc>
