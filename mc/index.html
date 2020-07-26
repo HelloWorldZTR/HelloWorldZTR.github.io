@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta name="msvalidate.01" content="EA008985D70B41C498FF534F5BF2DF53" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Minecraft 像素画转换器 | HelloWorld</title>
+  <meta name="description" content="一个用来快速将图片转换为我的世界像素画的工具">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Minecraft 像素画转换器">
+<meta property="og:url" content="https://hiztr.cn/mc/index.html">
+<meta property="og:site_name" content="HelloWorld">
+<meta property="og:description" content="一个用来快速将图片转换为我的世界像素画的工具">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-23T03:03:49.000Z">
+<meta property="article:modified_time" content="2020-07-26T00:59:36.898Z">
+<meta property="article:author" content="HelloWorldZTR">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="code">
+<meta property="article:tag" content="computer">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://hiztr.cn/mc/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="HelloWorld" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body class="main-center no-sidebar" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="http://hiztr.cn">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">HelloWorldZTR</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Developer &amp; PC Enthusiast</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shandong, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tools">
+          <a href="/tools">
+            
+            <i class="icon icon-book-shelf"></i>
+            
+            <span class="menu-title">Tools</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/HelloWorldZTR" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>Welcome to my site!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Develop/">Develop</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hackintosh/">Hackintosh</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Website/" rel="tag">Website</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Website/" style="font-size: 14px;">Website</a> <a href="/tags/java/" style="font-size: 13.5px;">java</a> <a href="/tags/springboot/" style="font-size: 13px;">springboot</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Develop/">Develop</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/06/01/Static-website-build-insturction/" class="title">个人博客搭建指南-静态网站托管</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-01T11:42:16.000Z" itemprop="datePublished">2020-06-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Develop/">Develop</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/23/Pixel-gen-user-guide/" class="title">我的世界像素生成器使用指南</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-23T06:53:04.000Z" itemprop="datePublished">2020-05-23</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Develop/">Develop</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/05/17/Image-hosting-tips/" class="title">个人博客搭建—使用图床</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-05-17T04:00:00.000Z" itemprop="datePublished">2020-05-17</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Develop/">Develop</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/04/09/Gitalk-register-and-use/" class="title">个人博客搭建—使用 Gitalk</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-04-08T23:16:44.000Z" itemprop="datePublished">2020-04-09</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Develop/">Develop</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/04/08/WebSite-Build-instruction/" class="title">个人博客搭建指南</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-04-08T08:29:02.000Z" itemprop="datePublished">2020-04-08</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="page-" class="article article-type-page" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Minecraft 像素画转换器
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/mc/index.html" class="article-date">
+	  <time datetime="2020-05-23T03:03:49.000Z" itemprop="datePublished">2020-05-23</time>
+	</a>
+</span>
+        
+        
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/mc/index.html#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 368(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 1(minutes)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>一个用来快速将图片转换为我的世界像素画的工具<br>使用前必读： <a href="https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/" target="_blank" rel="noopener">https://helloworldztr.github.io/2020/05/23/Pixel-gen-user-guide/</a></p>
+<a id="more"></a>
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--图片上传css-->
+<link rel="stylesheet" href="css/main.css">
+<!--js核心代码-->
+<script src="js/main.js"></script>
+<div class="row clearfix">
+    <!--左栏-->
+    <div class="col-xs-12 col-md-8 col-sm-12 ">
+        <h2>请选择图片</h2>
+        <div class="input-group image-preview">
+            <input type="text" class="form-control image-preview-filename" disabled="disabled">
+            <span class="input-group-btn">
+                <!-- image-preview-clear button -->
+                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                    <span class="glyphicon glyphicon-remove"></span> Clear
+                </button>
+                <!-- image-preview-input -->
+                <div class="btn btn-default image-preview-input">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                    <span class="image-preview-input-title">Browse</span>
+                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                </div>
+            </span>
+        </div>
+        <div id="DEBUG">
+            <img id="preview" style="display: none;" />
+        </div>
+    </div>
+    <!--右栏-->
+    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-4">
+        <h2>设置</h2>
+        <!-- <form role="form"> -->
+        <div class="row clearfix">
+            <!--左-->
+            <div class="form-group col-xs-6 col-sm-6 col-lg-12">
+                <h3>图片大小</h3>
+                <label>
+                    <input id="lock_ratio" type="checkbox" checked>&nbsp;锁定宽高比
+                </label><br>
+                <label>
+                    宽&nbsp;<input class="hw" id="width" type="number" value="0" onchange="adjustHeight()"> 方块
+                </label>
+                <label>
+                    高&nbsp;<input class="hw" id="height" type="number" value="0" onchange="adjustWidth()"> 方块
+                </label>
+                <h3>材料</h3>
+                <label>
+                    <input id="wool" name="material" type="radio" value="0" checked> 羊毛/混凝土&nbsp;
+                    <input id="conc" name="material" type="radio" value="1"> 全物品
+                </label>
+                <br>
+                <button class="btn-default btn" onclick="openCustom();">自定义</button>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-12">
+                <h3>像素大小</h3>
+                <label id="render_level">
+                    <p>即输入图片中的1像素等于几个方块</p>
+                    <p>有点卡，正在优化中...</p>
+                    <input onchange="adjustRenderLevel()" id="1x" name="anti" type="radio" value="1"> 1x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="2x" name="anti" type="radio" value="2" checked> 2x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="4x" name="anti" type="radio" value="4" disabled> 4x&nbsp;
+                    <input onchange="adjustRenderLevel()" id="8x" name="anti" type="radio" value="8" disabled> 8x&nbsp;
+                </label>
+                <p id="rendv"></p>
+                <h3>阈值</h3>
+                <label>
+                    <input type="range" name="slider-1" id="ths" min="0" max="255" step="1" value="200"
+                        onchange="changeThs()">
+                    <input id="blackwhite" type="checkbox" onchange="changeThs()">&nbsp;黑白模式
+                </label>
+                <p id="thsv"></p>
+                <h3>指令</h3>
+                <label>
+                    使用旧版名称
+                    <input type="checkbox" id="use-old-mcn">
+                </label>
+                <label>
+                    x:<input type="number" class="axis" value="0">
+                    y:<input type="number" class="axis" value="4">
+                    z:<input type="number" class="axis" value="0">
+                </label>
+            </div>
+            <!--右-->
+        </div>
+        <h3></h3>
+        <button id="btn_ok" class="btn btn-primary" onclick="$('#pgModal').modal('show');">确定</button>
+        &nbsp;
+        <button id="btn_can" class="btn btn-default" onclick="doReset()">重置</button>
+        <!-- &nbsp;
+        <button id="btn_test" class="btn btn-default" onclick="test()">Test</button> -->
+        &nbsp;
+        <a id="download" class="btn btn-default">下载指令文件</a>
+        &nbsp;
+        <button class="btn btn-default" data-toggle="modal" data-target="#myModal">蓝图</button>
+        <br><br>
+        <p>指令文件使用方法？</p>
+        <small>请百度'我的世界 function' 来获得更多信息（我将来也会详细介绍）</small>
+        <!-- </form> -->
+    </div>
+</div>
+
+<hr>
+<div id="result-box" class="row clearfix">
+    <div class="col-12" id="result-box-inner">
+        <canvas class="result-canvas1" style="display: none;"></canvas>
+    </div>
+    <button class="btn btn-default pull-right" onclick="$('#history').modal('show');">历史记录</button>
+</div>
+<div id="list" class="row" style="display: none;">
+    <div class="col-md-6">
+        <h2>物料清单</h2>
+        <table class="table">
+            <tbody id="list-inner">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 蓝图 -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">蓝图</h4>
+                <p>其实就是手稿一样的东西，如果实在是不会指令的话也可以用</p>
+            </div>
+            <div class="modal-body">
+                <textarea id="blueprint" style="width: 100%;"></textarea>
+            </div>
+            <div class="modal-footer">
+                <a id="download_bp" type="button" class="btn btn-default">下载</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 进度框 -->
+<div id="pgModal" class="modal fade" tabindex="-2" role="dialog" aria-labelledby="pgModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">进度</h4>
+            </div>
+            <div class="modal-body">
+                <p>进行大量运算可能导致浏览器假死，请耐心等待！！</p>
+                <p>正在进行优化，不过推荐使用现代浏览器</p>
+                <div class="progress">
+                    <p id="text"></p>
+                    <div id="pg" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                        aria-valuemax="1">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" onclick="doImage();">开始</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 自定义羊毛混凝土 -->
+<div id="woolModal" class="modal fade" tabindex="-3" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">自定义...</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <label>
+                        全选&nbsp;
+                        <input type="checkbox" id="woolModalAll" name="woolSelector">
+                        &nbsp;羊毛&nbsp;
+                        <input class="follow-selector1" type="checkbox" id="woolModalWool" name="woolSelector">
+                        &nbsp;混凝土&nbsp;
+                        <input class="follow-selector1" type="checkbox" id="woolModalConc" name="woolSelector">
+                    </label>
+                    <small class="pull-right">注意，旧版命令中混凝土用羊毛替代.</small>
+                    &nbsp;&nbsp;
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>选择</td>
+                                <td>ID</td>
+                                <td>旧版名称</td>
+                                <td>新版名称</td>
+                                <td>名称</td>
+                                <td>图片</td>
+                            </tr>
+                        </thead>
+                        <tbody id="woolTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 自定义全物品-->
+<div id="allModal" class="modal fade" tabindex="-4" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">自定义...</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <label>
+                        全选&nbsp;
+                        <input class="follow-selector2" type="checkbox" id="allModalAll" name="woolSelector" checked>
+                        &nbsp;羊毛&nbsp;
+                        <input class="follow-selector2" type="checkbox" id="allModalWool" name="woolSelector">
+                        &nbsp;混凝土&nbsp;
+                        <input class="follow-selector2" type="checkbox" id="allModalConc" name="woolSelector">
+                        &nbsp;土豪矿物系列&nbsp;
+                    </label>
+                    &nbsp;&nbsp;
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>选择</td>
+                                <td>ID</td>
+                                <td>旧版名称</td>
+                                <td>新版名称</td>
+                                <td>名称</td>
+                                <td>图片</td>
+                            </tr>
+                        </thead>
+                        <tbody id="allTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 历史记录-->
+<div id="history" class="modal fade" tabindex="-5" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">历史记录</h4>
+            </div>
+            <div class="modal-body" id="history-result">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+<h4 id="作者：HelloWorldZTR"><a href="#作者：HelloWorldZTR" class="headerlink" title="作者：HelloWorldZTR"></a>作者：HelloWorldZTR</h4>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>Link Addr：</strong>
+      <a href="https://hiztr.cn/mc/index.html" title="Minecraft 像素画转换器" target="_blank" rel="external">https://hiztr.cn/mc/index.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>Copyright： </strong> All articles of this blog use <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0</a> license. Include the link above if you want to copy it！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="http://hiztr.cn" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="http://hiztr.cn" target="_blank"><span class="text-dark">HelloWorldZTR</span><small class="ml-1x">Developer &amp; PC Enthusiast</small></a></h3>
+        <div>A programmer of some sort. Loves coding and all kinds of things about computers.</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/HelloWorldZTR" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
