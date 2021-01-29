@@ -26,18 +26,18 @@
 <meta property="og:site_name" content="HelloWorld">
 <meta property="og:description" content="我使用了一段时间，除了偶尔休眠会panic重启之外，绝对是完美的。完美支持 macOS Big Sur">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i0.hdslb.com/bfs/article/f2622b152e1eafabc062ead63800bf2f1f296a0b.jpg">
-<meta property="og:image" content="https://i0.hdslb.com/bfs/article/732b37d73a88216950ad47eb9411480bca02dd91.png">
-<meta property="og:image" content="https://i0.hdslb.com/bfs/article/4433e37c26299db7b3e3e8f82050cf7645d9c882.png">
-<meta property="og:image" content="https://i0.hdslb.com/bfs/article/02db465212d3c374a43c60fa2625cc1caeaab796.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/29/UjBHVAa8SPwCpYT.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/01/29/kcKujR1zYQoGHMC.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/29/9MAaeJiqUHhwu5R.png">
+<meta property="og:image" content="https://i.loli.net/2021/01/29/4MmLWzjuelR1bVZ.png">
 <meta property="article:published_time" content="2021-01-29T01:12:43.000Z">
-<meta property="article:modified_time" content="2021-01-29T01:48:21.978Z">
+<meta property="article:modified_time" content="2021-01-29T02:48:24.331Z">
 <meta property="article:author" content="HelloWorldZTR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="computer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i0.hdslb.com/bfs/article/f2622b152e1eafabc062ead63800bf2f1f296a0b.jpg">
+<meta name="twitter:image" content="https://i.loli.net/2021/01/29/UjBHVAa8SPwCpYT.jpg">
   <!-- Canonical links -->
   <link rel="canonical" href="https://hiztr.cn/2021/01/29/lenovo-m73-hackintosh/index.html">
   
@@ -411,8 +411,8 @@
 <p>挺便宜的，大家买的时候注意看看，其实也不指望能用多久，毕竟垃圾佬么</p>
 <h2 id="折腾过程"><a href="#折腾过程" class="headerlink" title="折腾过程"></a>折腾过程</h2><p>果真他人的力量是伟大的，作为一个伸手党，感觉比上一次简单多了<br>我就把旧的macOS high sierra盘EFI分区一改（b站找的EFI）简单一装，电源一插，一开机就成了。给我惊到了(<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1FZ4y1G7Hf">https://www.bilibili.com/video/BV1FZ4y1G7Hf</a>)</p>
 <p>然后我从app store下载了个bigsur安装器，奇怪了，总显示下载出错。于是我整了个百试不爽的 <code>Installinstallmacos.py</code>，下载了完整版安装包，一个多小时就装好了(<a target="_blank" rel="noopener" href="https://github.com/munki/macadmin-scripts">https://github.com/munki/macadmin-scripts</a>)</p>
-<h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><p><img src="https://i0.hdslb.com/bfs/article/f2622b152e1eafabc062ead63800bf2f1f296a0b.jpg" alt=""></p>
-<p>安装好后，我用opencore configurator把引导菜单去掉，注入了三码，打开 intel power gadget 一看,wtm空载60多度，我一度怀疑没涂硅脂<br><img src="https://i0.hdslb.com/bfs/article/732b37d73a88216950ad47eb9411480bca02dd91.png" alt=""></p>
+<h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><p><img src="https://i.loli.net/2021/01/29/UjBHVAa8SPwCpYT.jpg" alt="f2622b152e1eafabc062ead63800bf2f1f296a0b.jpg"></p>
+<p>安装好后，我用opencore configurator把引导菜单去掉，注入了三码，打开 intel power gadget 一看,wtm空载60多度，我一度怀疑没涂硅脂<br><img src="https://i.loli.net/2021/01/29/kcKujR1zYQoGHMC.png" alt="732b37d73a88216950ad47eb9411480bca02dd91.png"></p>
 <p>后来，我在翻bios中发现了转机</p>
 <ol>
 <li>戳爆<code>F2</code>进bios</li>
@@ -420,14 +420,14 @@
 <li><code>Intelligent Cooling Engine (ICE)</code>选项</li>
 <li>调成 <code>Better Thermal Performance</code> （更好的散热表现） 或 <code>Full Speed</code>(风扇全速)</li>
 </ol>
-<p>调过之后表现还行，待机平均50度，最高90度，不至于损坏<br>不过作为一个<del>善良的人</del>还是觉得有点过意不去，准备抽空换个散热<br><img src="https://i0.hdslb.com/bfs/article/4433e37c26299db7b3e3e8f82050cf7645d9c882.png" alt=""></p>
+<p>调过之后表现还行，待机平均50度，最高90度，不至于损坏<br>不过作为一个<del>善良的人</del>还是觉得有点过意不去，准备抽空换个散热<br><img src="https://i.loli.net/2021/01/29/9MAaeJiqUHhwu5R.png" alt="4433e37c26299db7b3e3e8f82050cf7645d9c882.png"></p>
 <h2 id="各种坑"><a href="#各种坑" class="headerlink" title="各种坑"></a>各种坑</h2><p>如果你还没入坑，那太好了，一起来看看会遇到什么问题</p>
 <ul>
 <li>CPU最好是<strong>低电压低功耗</strong>的，也就是所谓T后缀或S后缀的。标压的也不是不能用，只不过待机温度偏高。i3 4330在静音模式下高达60℃。bios里选择散热优先，满载时的温度长时间倒也不至于损坏。只是需要斟酌罢了，高频率和低温度不可兼得。实测macOS对频率要求不太高，为了长久大计还是买个 <code>i3 4330t</code> 吧</li>
 <li>CPU核心显卡最好是<code>HD 4600</code>的，听说4400有JPG预览问题，而且比较麻烦。HD 4600简单方便，原生支持，也就贵个十来块，省下好多烦心事。这就是说i3 31xx不合适</li>
 <li>VGA省了吧，买根<code>DisplayPort</code>线，苹果早就抛弃vga接口了（2G网真快）<br>看看这里方便买CPU</li>
 </ul>
-<p><strong>Intel Core i3</strong><br><a target="_blank" rel="noopener" href="https://ark.intel.com/content/www/cn/zh/ark/products/series/75025/4th-generation-intel-core-i3-processors.html#@Desktop">https://ark.intel.com/content/www/cn/zh/ark/products/series/75025/4th-generation-intel-core-i3-processors.html#@Desktop</a><br><strong>Intel Core i5</strong><br><a target="_blank" rel="noopener" href="https://ark.intel.com/content/www/cn/zh/ark/products/series/75024/4th-generation-intel-core-i5-processors.html#@Desktop">https://ark.intel.com/content/www/cn/zh/ark/products/series/75024/4th-generation-intel-core-i5-processors.html#@Desktop</a><br>最好是T/S后缀或者i3不带后缀也行<br>核心显卡要保证是<code>英特尔® 核芯显卡 4600</code><br>TDP不要超过60W，不然你就可以用电脑烤肉了:P<br><img src="https://i0.hdslb.com/bfs/article/02db465212d3c374a43c60fa2625cc1caeaab796.png" alt=""><br>祝大家玩的愉快</p>
+<p><strong>Intel Core i3</strong><br><a target="_blank" rel="noopener" href="https://ark.intel.com/content/www/cn/zh/ark/products/series/75025/4th-generation-intel-core-i3-processors.html#@Desktop">https://ark.intel.com/content/www/cn/zh/ark/products/series/75025/4th-generation-intel-core-i3-processors.html#@Desktop</a><br><strong>Intel Core i5</strong><br><a target="_blank" rel="noopener" href="https://ark.intel.com/content/www/cn/zh/ark/products/series/75024/4th-generation-intel-core-i5-processors.html#@Desktop">https://ark.intel.com/content/www/cn/zh/ark/products/series/75024/4th-generation-intel-core-i5-processors.html#@Desktop</a><br>最好是T/S后缀或者i3不带后缀也行<br>核心显卡要保证是<code>英特尔® 核芯显卡 4600</code><br>TDP不要超过60W，不然你就可以用电脑烤肉了:P<br><img src="https://i.loli.net/2021/01/29/4MmLWzjuelR1bVZ.png" alt="02db465212d3c374a43c60fa2625cc1caeaab796.png"><br>祝大家玩的愉快</p>
 
       
     </div>
