@@ -2,122 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hiztr.cn/mc/index.html</loc>
+    <loc>https://hiztr.cn/about/index.html</loc>
     
-    <lastmod>2020-07-26T00:59:36.898Z</lastmod>
+    <lastmod>2021-01-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hiztr.cn/2020/05/23/Pixel-gen-user-guide/</loc>
+    <loc>https://hiztr.cn/2021/01/29/lenovo-m73-hackintosh/</loc>
     
-    <lastmod>2020-06-08T12:29:55.989Z</lastmod>
+    <lastmod>2021-01-29</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/04/08/WebSite-Build-instruction/</loc>
     
-    <lastmod>2020-06-05T11:33:53.759Z</lastmod>
+    <lastmod>2020-06-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/06/01/Static-website-build-insturction/</loc>
     
-    <lastmod>2020-06-05T11:33:30.813Z</lastmod>
+    <lastmod>2020-06-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/03/04/Make_a_gui_in_java/</loc>
     
-    <lastmod>2020-06-05T11:30:25.933Z</lastmod>
+    <lastmod>2020-06-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/05/17/Image-hosting-tips/</loc>
     
-    <lastmod>2020-06-05T11:29:39.669Z</lastmod>
+    <lastmod>2020-06-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/04/09/Gitalk-register-and-use/</loc>
     
-    <lastmod>2020-06-05T11:28:52.696Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hiztr.cn/pixelcalc/index.html</loc>
-    
-    <lastmod>2020-05-30T06:10:40.306Z</lastmod>
+    <lastmod>2020-06-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/03/10/Hackintosh-ATI-Driver/</loc>
     
-    <lastmod>2020-05-26T05:21:53.765Z</lastmod>
+    <lastmod>2020-05-26</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/03/05/Simple-explain-to-logistic-regrssion/</loc>
     
-    <lastmod>2020-05-26T05:21:16.281Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hiztr.cn/tools/index.html</loc>
-    
-    <lastmod>2020-05-24T04:44:45.713Z</lastmod>
+    <lastmod>2020-05-26</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/03/04/Static-Inject-in-Springboot/</loc>
     
-    <lastmod>2020-05-19T09:04:52.965Z</lastmod>
+    <lastmod>2020-05-19</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/2020/03/04/Change-Maven-in-Idea/</loc>
     
-    <lastmod>2020-05-19T09:04:28.907Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hiztr.cn/about/index.html</loc>
-    
-    <lastmod>2020-04-08T00:49:05.153Z</lastmod>
+    <lastmod>2020-05-19</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/404.html</loc>
     
-    <lastmod>2020-04-07T02:32:24.953Z</lastmod>
+    <lastmod>2020-04-07</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/index.html</loc>
     
-    <lastmod>2020-04-07T01:25:55.290Z</lastmod>
+    <lastmod>2020-04-07</lastmod>
     
   </url>
   
   <url>
     <loc>https://hiztr.cn/categories/index.html</loc>
     
-    <lastmod>2020-04-07T01:25:48.175Z</lastmod>
+    <lastmod>2020-04-07</lastmod>
     
+  </url>
+  
+
+  <url>
+    <loc>https://hiztr.cn/</loc>
+    <lastmod>2021-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://hiztr.cn/tags/java/</loc>
+    <lastmod>2021-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/tags/Website/</loc>
+    <lastmod>2021-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/tags/springboot/</loc>
+    <lastmod>2021-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://hiztr.cn/categories/Develop/</loc>
+    <lastmod>2021-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/categories/Hackintosh/</loc>
+    <lastmod>2021-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/categories/Other/</loc>
+    <lastmod>2021-01-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
   </url>
   
 </urlset>

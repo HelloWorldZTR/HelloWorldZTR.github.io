@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hiztr.cn/2020/05/23/Pixel-gen-user-guide/</loc>
-    <lastmod>2020-06-08</lastmod>
-  </url>  <url>
+    <loc>https://hiztr.cn/2021/01/29/lenovo-m73-hackintosh/</loc>
+    <lastmod>2021-01-29</lastmod>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/04/08/WebSite-Build-instruction/</loc>
     <lastmod>2020-06-05</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/06/01/Static-website-build-insturction/</loc>
     <lastmod>2020-06-05</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/03/04/Make_a_gui_in_java/</loc>
     <lastmod>2020-06-05</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/05/17/Image-hosting-tips/</loc>
     <lastmod>2020-06-05</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/04/09/Gitalk-register-and-use/</loc>
     <lastmod>2020-06-05</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/03/10/Hackintosh-ATI-Driver/</loc>
     <lastmod>2020-05-26</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/03/05/Simple-explain-to-logistic-regrssion/</loc>
     <lastmod>2020-05-26</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/03/04/Static-Inject-in-Springboot/</loc>
     <lastmod>2020-05-19</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2020/03/04/Change-Maven-in-Idea/</loc>
     <lastmod>2020-05-19</lastmod>
   </url>
-</urlset>
+</urlset> 
