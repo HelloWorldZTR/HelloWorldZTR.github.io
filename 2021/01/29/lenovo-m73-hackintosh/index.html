@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/01/29/9MAaeJiqUHhwu5R.png">
 <meta property="og:image" content="https://i.loli.net/2021/01/29/4MmLWzjuelR1bVZ.png">
 <meta property="article:published_time" content="2021-01-29T01:12:43.000Z">
-<meta property="article:modified_time" content="2021-01-29T02:48:24.331Z">
+<meta property="article:modified_time" content="2021-01-30T09:11:54.740Z">
 <meta property="article:author" content="HelloWorldZTR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="code">
@@ -370,7 +370,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/01/29/lenovo-m73-hackintosh/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 820(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 876(words)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 3(minutes)</span>
@@ -400,6 +400,10 @@
 <td>ddr3 1333 2g x2 （笔记本的，要什么自行车，主力机还是买两根4G的吧）</td>
 </tr>
 <tr>
+<td>准系统</td>
+<td>买的白的NEC的定制版(m73p)，配了个一看就是其他厂的65W电源，带盘架没网卡</td>
+</tr>
+<tr>
 <td>硬盘</td>
 <td>sata固态（我的旧电脑上扣下来的不要钱:P）</td>
 </tr>
@@ -412,7 +416,7 @@
 <h2 id="折腾过程"><a href="#折腾过程" class="headerlink" title="折腾过程"></a>折腾过程</h2><p>果真他人的力量是伟大的，作为一个伸手党，感觉比上一次简单多了<br>我就把旧的macOS high sierra盘EFI分区一改（b站找的EFI）简单一装，电源一插，一开机就成了。给我惊到了(<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1FZ4y1G7Hf">https://www.bilibili.com/video/BV1FZ4y1G7Hf</a>)</p>
 <p>然后我从app store下载了个bigsur安装器，奇怪了，总显示下载出错。于是我整了个百试不爽的 <code>Installinstallmacos.py</code>，下载了完整版安装包，一个多小时就装好了(<a target="_blank" rel="noopener" href="https://github.com/munki/macadmin-scripts">https://github.com/munki/macadmin-scripts</a>)</p>
 <h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><p><img src="https://i.loli.net/2021/01/29/UjBHVAa8SPwCpYT.jpg" alt="f2622b152e1eafabc062ead63800bf2f1f296a0b.jpg"></p>
-<p>安装好后，我用opencore configurator把引导菜单去掉，注入了三码，打开 intel power gadget 一看,wtm空载60多度，我一度怀疑没涂硅脂<br><img src="https://i.loli.net/2021/01/29/kcKujR1zYQoGHMC.png" alt="732b37d73a88216950ad47eb9411480bca02dd91.png"></p>
+<p>安装好后，我用opencore configurator把引导菜单去掉，注入了三码，打开 intel power gadget 一看,wtm空载60多度，我一度怀疑没涂硅脂（事实证明散热器安装压力小了点，大家拧到底就行）<br><img src="https://i.loli.net/2021/01/29/kcKujR1zYQoGHMC.png" alt="732b37d73a88216950ad47eb9411480bca02dd91.png"></p>
 <p>后来，我在翻bios中发现了转机</p>
 <ol>
 <li>戳爆<code>F2</code>进bios</li>
@@ -420,7 +424,7 @@
 <li><code>Intelligent Cooling Engine (ICE)</code>选项</li>
 <li>调成 <code>Better Thermal Performance</code> （更好的散热表现） 或 <code>Full Speed</code>(风扇全速)</li>
 </ol>
-<p>调过之后表现还行，待机平均50度，最高90度，不至于损坏<br>不过作为一个<del>善良的人</del>还是觉得有点过意不去，准备抽空换个散热<br><img src="https://i.loli.net/2021/01/29/9MAaeJiqUHhwu5R.png" alt="4433e37c26299db7b3e3e8f82050cf7645d9c882.png"></p>
+<p>调过之后表现还行，待机平均40～50度，最高70～80度，不至于损坏<br>不过作为一个<del>善良的人</del>还是觉得有点过意不去，准备抽空换个散热<br><img src="https://i.loli.net/2021/01/29/9MAaeJiqUHhwu5R.png" alt="4433e37c26299db7b3e3e8f82050cf7645d9c882.png"></p>
 <h2 id="各种坑"><a href="#各种坑" class="headerlink" title="各种坑"></a>各种坑</h2><p>如果你还没入坑，那太好了，一起来看看会遇到什么问题</p>
 <ul>
 <li>CPU最好是<strong>低电压低功耗</strong>的，也就是所谓T后缀或S后缀的。标压的也不是不能用，只不过待机温度偏高。i3 4330在静音模式下高达60℃。bios里选择散热优先，满载时的温度长时间倒也不至于损坏。只是需要斟酌罢了，高频率和低温度不可兼得。实测macOS对频率要求不太高，为了长久大计还是买个 <code>i3 4330t</code> 吧</li>

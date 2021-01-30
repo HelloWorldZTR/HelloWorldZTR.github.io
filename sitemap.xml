@@ -4,7 +4,14 @@
   <url>
     <loc>https://hiztr.cn/2021/01/29/lenovo-m73-hackintosh/</loc>
     
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/404.html</loc>
+    
+    <lastmod>2021-01-30</lastmod>
     
   </url>
   
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://hiztr.cn/404.html</loc>
-    
-    <lastmod>2020-04-07</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hiztr.cn/tags/index.html</loc>
     
     <lastmod>2020-04-07</lastmod>
@@ -102,7 +102,7 @@
 
   <url>
     <loc>https://hiztr.cn/</loc>
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,21 +110,21 @@
   
   <url>
     <loc>https://hiztr.cn/tags/java/</loc>
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/Website/</loc>
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/springboot/</loc>
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -133,21 +133,21 @@
   
   <url>
     <loc>https://hiztr.cn/categories/Develop/</loc>
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/categories/Hackintosh/</loc>
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/categories/Other/</loc>
-    <lastmod>2021-01-29</lastmod>
+    <lastmod>2021-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
