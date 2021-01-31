@@ -18,11 +18,11 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Category: Hackintosh | HelloWorld</title>
+  <title>HelloWorld</title>
   <meta name="description" content="HelloWorldZTR is a Developer &amp; PC Enthusiast in Shandong, China, loves coding and all kinds of things about computers.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="HelloWorld">
-<meta property="og:url" content="https://hiztr.cn/categories/Hackintosh/index.html">
+<meta property="og:url" content="https://hiztr.cn/page/2/index.html">
 <meta property="og:site_name" content="HelloWorld">
 <meta property="og:description" content="HelloWorldZTR is a Developer &amp; PC Enthusiast in Shandong, China, loves coding and all kinds of things about computers.">
 <meta property="og:locale" content="en_US">
@@ -32,7 +32,7 @@
 <meta property="article:tag" content="computer">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://hiztr.cn/categories/Hackintosh/index.html">
+  <link rel="canonical" href="https://hiztr.cn/page/2/index.html">
   
     <link rel="alternate" href="/atom.xml" title="HelloWorld" type="application/atom+xml">
   
@@ -313,70 +313,138 @@
 
   
   <main class="main" role="main">
-  <article class="content article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">Category: Hackintosh</h1>
-      <p class="hidden-xs">Total 3 articles</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/Develop/">Develop</a></li>
-          
-          <li><a href="/categories/Hackintosh/">Hackintosh</a></li>
-          
-          <li><a href="/categories/Other/">Other</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="panel panel-default b-no">
-    <div class="panel-heading" role="tab">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" href="#collapseHackintosh" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              Hackintosh
-            </a>
-            <small class="text-muted">(Total 3 articles)</small>
-        </h4>
+  
+  
+    <div class="content">
+  <article id="post-Change-Maven-in-Idea" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/04/Change-Maven-in-Idea/">修改 IDEA 自带的 maven 源</a>
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/03/04/Change-Maven-in-Idea/" class="article-date">
+	  <time datetime="2020-03-03T16:00:00.000Z" itemprop="datePublished">2020-03-04</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Develop/">Develop</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/java/" rel="tag">java</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/03/04/Change-Maven-in-Idea/#comments" class="article-comment-link">Comments</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Total: 369(words)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 1(minutes)</span>
+	
+
+      </div>
     </div>
-    <div id="collapseHackintosh" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingHackintosh">
-        <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2021/01/31/Powerstate-error-solution/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2021-01-31T08:29:15.000Z" itemprop="datePublished">2021-01-31</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 如何解决黑苹果唤醒后 Kernel Panic（AppleHDAHDMI_DPDriver::setPowerState）
-</a>
-
-
-              
-                
-<a href="/2021/01/29/lenovo-m73-hackintosh/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2021-01-29T01:12:43.000Z" itemprop="datePublished">2021-01-29</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 联想M73黑苹果折腾
-</a>
-
-
-              
-                
-<a href="/2020/03/10/Hackintosh-ATI-Driver/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-03-10T09:37:32.000Z" itemprop="datePublished">2020-03-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 黑苹果 ATI HD 显卡通用驱动方式及 HD 5450 的驱动
-</a>
-
-
-              
-            </div>
-        </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>作死用过idea自带maven的都知道，在国内真的贼慢。就导入几个依赖就得花上大半个小时。于是我一番百度，果断更改了maven镜像源。现在记录下来以免再次踩坑。</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/03/04/Change-Maven-in-Idea/#more">Read More</a>
+          </p>
+        
+      
     </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>Link Addr：</strong>
+      <a href="https://hiztr.cn/2020/03/04/Change-Maven-in-Idea/" title="修改 IDEA 自带的 maven 源" target="_blank" rel="external">https://hiztr.cn/2020/03/04/Change-Maven-in-Idea/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>Copyright： </strong> All articles of this blog use <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0</a> license. Include the link above if you want to copy it！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="http://hiztr.cn" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="http://hiztr.cn" target="_blank"><span class="text-dark">HelloWorldZTR</span><small class="ml-1x">Developer &amp; PC Enthusiast</small></a></h3>
+        <div>A programmer of some sort. Loves coding and all kinds of things about computers.</div>
+      </div>
+    </figure>
+  </div>
 </div>
+
+
     </div>
   </article>
-   
+  
+</div>
+
+  
+
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev">
+                <a href="/">
+                    <i class="icon icon-angle-left"></i>
+                    Prev
+                </a>
+            </li>
+            
+            
+            <li class="next disabled">
+                <a href="javascript:;">
+                    Next
+                    <i class="icon icon-angle-right"></i>                    
+                </a>
+            </li>
+            
+        </ul>
+        <div class="total-article bar-right">Page 2 of 2</div>
+        </div>
+    </nav>
+    
+ 
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -431,6 +499,12 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 <script src="/js/insight.js"></script>
 
 
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
