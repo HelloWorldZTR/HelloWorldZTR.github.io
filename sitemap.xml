@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hiztr.cn/2021/01/29/lenovo-m73-hackintosh/</loc>
+    
+    <lastmod>2021-07-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hiztr.cn/2021/01/31/Powerstate-error-solution/</loc>
     
     <lastmod>2021-07-02</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://hiztr.cn/2021/07/02/thinks-on-python/</loc>
     
     <lastmod>2021-07-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hiztr.cn/2021/01/29/lenovo-m73-hackintosh/</loc>
-    
-    <lastmod>2021-01-31</lastmod>
     
   </url>
   
