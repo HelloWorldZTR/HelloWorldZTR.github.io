@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hiztr.cn/"/>
-  <updated>2021-07-02T03:29:18.938Z</updated>
+  <updated>2021-07-19T01:52:33.938Z</updated>
   <id>https://hiztr.cn/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021 年 NEX-C3 折腾手记</title>
+    <link href="https://hiztr.cn/2021/07/19/nex-c3/"/>
+    <id>https://hiztr.cn/2021/07/19/nex-c3/</id>
+    <published>2021-07-18T23:22:36.000Z</published>
+    <updated>2021-07-19T01:52:33.938Z</updated>
+    
+    <content type="html"><![CDATA[<p>NEX-C3 是索尼发布于 2011 年 4 月的一款微单，可以说是索尼第一代微单家族中的一员。<br>出于经济原因（咳），我在十年之后又不得不让它带病出征了。</p><span id="more"></span><p>我们先看一下参数:</p><table><thead><tr><th>主要性能</th><th></th></tr></thead><tbody><tr><td>传感器类型</td><td>Exmor APS HD CMOS</td></tr><tr><td>传感器尺寸</td><td>APS画幅（23.5*15.6mm）</td></tr><tr><td>最大像素数</td><td>1650万</td></tr><tr><td>影像处理器</td><td>BIONZ Engine</td></tr><tr><td>最高分辨率</td><td>4912×3264(JPEG/RAW)</td></tr><tr><td>高清摄像</td><td>高清（720P）</td></tr><tr><td>显示屏像素</td><td>92.1万像素液晶屏</td></tr><tr><td>对焦点数</td><td>25点，49区测光</td></tr></tbody></table><p>我仅花了600元就从闲鱼上蹲到了这台机器（1650套机)，可以说，这是入门摄影（手机除外）的最低门槛了。</p><h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p><strong>价格低</strong>是我选择奶昔系列的首要原因。相比之下，3000大洋的全新在产<code>a6000</code>，除了像素、对焦等功能和evf（电子取景器）之外，并无太大优势。对于摄影小白来说，性价比着实不高。如果你觉得nfc，Wi-Fi传图很重要，那就加加钱上吧。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(a6000参数)</span><br><span class="line">传感器：APS画幅（23.5*15.6mm）</span><br><span class="line">有效像素：2430万</span><br><span class="line">显示屏尺寸：3英寸</span><br><span class="line">显示屏像素：92万像素液晶屏</span><br></pre></td></tr></table></figure><p>一般情况下，这个1620W像素已经够用了，后期裁切也有空间。如果你想要比手机画质好一点的相机话，那么它可以满足你的需求。<br>（另外说一下，像素低并不一定画质差。大家一定不要拿相机的像素和手机比，就算16mp拍出来效果也可以好过什么多少万像素的手机。同像素，传感器越大画质越好，所以不太推荐卡片机和手机。）<br><img src="https://i.loli.net/2021/07/19/98kRyXuB2tel3nV.jpg" alt="DSC00132.jpg"><br>另外该机器配有峰值对焦功能，<strong>配合手动镜头玩转接太香了</strong>。几乎市面上的全部卡口都可以转接，无穷远也合焦。我现在长期搭配200块星耀的<code>35mm f1.7</code>，等效50mm 拍拍风光人物都不错。用转接环玩老镜头也不错。</p><p>这个价位，要什么自行车。</p><h2 id="劣势"><a href="#劣势" class="headerlink" title="劣势"></a>劣势</h2><p>十年前的老机器了，总会多多少少有些不足之处。<br>这个机器最大的三个问题是：<strong>按键失灵、屏幕脱膜和电池拉垮</strong>。</p><p>按键失灵指的是那个旋钮，上下左右可能颠倒错乱，但是旋转功能是正常的，正常调节光圈快门以及翻看照片是没有问题的。</p><p><img src="https://i.loli.net/2021/07/19/9mt7RGy3HaVEp56.png" alt="Screen Shot 2021-07-19 at 8.11.23 AM.png"></p><p>另外屏幕这个问题比上一个还严重。大概是这个样子</p><p><img src="https://i.loli.net/2021/07/19/Xchn5KqZ4xRfgyT.jpg" alt="laji.jpg"></p><p>平常室内使用也没什么问题，但是户外大太阳底下就啥也看不见。本来这个屏幕素质就差，加上没有取景器，只能通过屏幕取景，拍出来的照片就是这样的：<br>（你实际拍出来的vs.你以为你拍出来的.jpg)<br><img src="https://i.loli.net/2021/07/19/A4DLNknVE3mx26I.png" alt="Screen Shot 2021-07-19 at 8.14.25 AM.png"><br>我说这和a6000是一块屏幕你敢信？</p><p>电池拉垮这也是没办法的事，索尼十年都没换掉垃圾的<code>fw50</code>。fw——废物，索尼也知道这玩意拉垮。拍个一百张就没电了。</p><p>当然这些问题都有解决办法，<strong>按钮可以在淘宝上买到配件，50一个不包邮，换起来也简单；屏幕可以买个液晶屏遮光罩，35一个；电池就买上一打，边充边用吧</strong>。</p><p>然而我就为了省这个三十五十的，又花回去了不合适吧。如果你也准备凑合着用，请注意这些问题</p><p>这是遮光罩的样子:<br><img src="https://i.loli.net/2021/07/19/ZCDRAHe7FOgQ6PL.png" alt="遮光罩"></p><p>另外就是索尼通病了，迷宫菜单，蜜汁白平衡和拉垮套头。（selp 1650 f8gm没说你)<br>当然这些问题后期多少也是可以修复的。</p><h2 id="总而言之"><a href="#总而言之" class="headerlink" title="总而言之"></a>总而言之</h2><p>如果你准备买一个十年前的数码产品，最好还是知道它的通病，顺便降低一下你的期望。快门数、暗病虽然不太好听但也要问问卖家。</p><p>如果你能接受的了这些问题和潜在的问题，并且真正经济有限的话，那<strong>这个相机是你很好的选择。600的价格，用来记录生活，旅游拍照都很在行</strong>。摄影的乐趣不在于花钱，而是在于过程的体验。更重要的是，是你在用它，还是它在用你。只要方法得当，奶昔也能拍出大片。</p><p>毕竟老骥伏枥，志在千里，接下来的几年里，它就将陪我作伴，记录我的生活了。</p><h2 id="样片儿"><a href="#样片儿" class="headerlink" title="样片儿"></a>样片儿</h2><p><img src="https://i.loli.net/2021/07/19/6wQBRcnTsyIoqbK.jpg" alt="DSC00234.jpg"></p><p><img src="https://i.loli.net/2021/07/19/FOVZPdRaxyGvs93.jpg" alt="DSC00252.jpg"></p><p><img src="https://i.loli.net/2021/07/19/jdez2ImRJTVQCbr.jpg" alt="DSC00248.jpg"></p><p><img src="https://i.loli.net/2021/07/19/iPtcBbg9S8OVA4N.jpg" alt="DSC00134.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;NEX-C3 是索尼发布于 2011 年 4 月的一款微单，可以说是索尼第一代微单家族中的一员。&lt;br&gt;出于经济原因（咳），我在十年之后又不得不让它带病出征了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="https://hiztr.cn/categories/Other/"/>
+    
+    
+      <category term="loafing" scheme="https://hiztr.cn/tags/loafing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>就国内 python 中文站的一点看法</title>
     <link href="https://hiztr.cn/2021/07/02/thinks-on-python/"/>
     <id>https://hiztr.cn/2021/07/02/thinks-on-python/</id>
     <published>2021-07-02T03:13:32.000Z</published>
-    <updated>2021-07-02T03:29:18.938Z</updated>
+    <updated>2021-07-18T23:24:13.592Z</updated>
     
     <content type="html"><![CDATA[<p>最近我想提高自己的python技能，于是着手编写一个有趣的小app。<br>然而当我遇到了问题，准备去问问度娘时，直接被震惊了。<br>  <span id="more"></span><br>点开前几个网站看，都是机翻<code>stackoverflow</code>的，读起来一点中文的感觉也没有。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tkinter由于事件循环，after方法和绑定，它本身是异步的。</span><br><span class="line">但是，如果您尝试使用asyncio它也是可行的，但是首先让我们考虑一下您尝试过的方法。</span><br><span class="line">您的第一次尝试显然是失败的，因为spam当它是时，您尝试作为泛型函数进行调用coroutine。您的其他尝试比第一次尝试更正确，但是await coroutine或者yield from coroutine只能用于从另一个协程启动协程，因此再次失败。</span><br><span class="line">因此，启动该野兽的正确方法是使用一种不言自明的方法（或old ，它只是一个已弃用的别名）来安排其执行时间。ensure_futureasync</span><br></pre></td></tr></table></figure><p>再看看CSDN的，都是搬运来的，代码格式大概如下:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">onClick</span>(<span class="params"> self, controlId </span>):</span><span class="comment">#吧啦吧啦吧啦BaseWindow.onClick(self, controlId)if controlId == 810:self.selectRange(self.getControl(810).getSelectedPosition())#吧啦吧啦吧啦else:play(self.pdata[int(self.getControl(820).getSelectedItem().getLabel2())][&#x27;videoid&#x27;])</span></span><br></pre></td></tr></table></figure><p>我寻思为了这点流量至于整这么烂的活吗？真让我想起百度问答驴唇不对马嘴的回复。有被气到，文章就放在这，五年后看看有没有改善。<br>当然了，也有不少人的博客表达清晰，简单明了，可惜总被搜索引擎藏着。希望他们的精神能被多多发扬吧。😮‍💨</p>]]></content>
     
@@ -35,7 +58,7 @@
       <category term="Develop" scheme="https://hiztr.cn/categories/Develop/"/>
     
     
-      <category term="lofting" scheme="https://hiztr.cn/tags/lofting/"/>
+      <category term="loafing" scheme="https://hiztr.cn/tags/loafing/"/>
     
   </entry>
   
