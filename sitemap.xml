@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hiztr.cn/2022/05/21/t470-hackintosh/</loc>
+    
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hiztr.cn/2022/02/10/rb67-introduction/</loc>
     
     <lastmod>2022-05-20</lastmod>
@@ -166,7 +175,7 @@
 
   <url>
     <loc>https://hiztr.cn/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -174,28 +183,28 @@
   
   <url>
     <loc>https://hiztr.cn/tags/java/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/Website/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/springboot/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/loafing/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -204,21 +213,21 @@
   
   <url>
     <loc>https://hiztr.cn/categories/Develop/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/categories/Hackintosh/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/categories/Other/</loc>
-    <lastmod>2022-05-20</lastmod>
+    <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

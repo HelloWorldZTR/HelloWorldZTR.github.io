@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hiztr.cn/"/>
-  <updated>2022-05-20T13:31:21.846Z</updated>
+  <updated>2022-05-21T01:55:57.787Z</updated>
   <id>https://hiztr.cn/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>联想 T470 黑苹果小记</title>
+    <link href="https://hiztr.cn/2022/05/21/t470-hackintosh/"/>
+    <id>https://hiztr.cn/2022/05/21/t470-hackintosh/</id>
+    <published>2022-05-21T00:30:38.000Z</published>
+    <updated>2022-05-21T01:55:57.787Z</updated>
+    
+    <content type="html"><![CDATA[<p>前些天拿到了块新的 nvme 硬盘，顺道给之前没装上的 t470 装个黑苹果。</p><span id="more"></span><iframe id="bilibili" src="//player.bilibili.com/player.html?bvid=BV11i4y1S7Lb"  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>其实这台电脑本来不适合黑苹果，因为他的网卡和硬盘曾经都是无解的。但是现在有了<code>itlwm</code>和多余的硬盘，就可以安装黑苹果了。<br>这台电脑其实性能很好，装黑苹果使用体验也很好，基本上是不会卡顿的。但是想真正达到白苹果的体验还得买个博通网卡玩玩隔空投送。</p><h2 id="硬件一览"><a href="#硬件一览" class="headerlink" title="硬件一览"></a>硬件一览</h2><image src="https://s2.loli.net/2022/05/21/AWmYCN4qbUBupd5.jpg" style="width:80%"></image><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>CPU</td><td>Intel Core i7 7500U</td></tr><tr><td>RAM</td><td>DDR4 2133 2x4G</td></tr><tr><td>网卡</td><td>Intel ac8260</td></tr><tr><td>显卡</td><td>HD 520(已禁用独显)</td></tr><tr><td>机型</td><td>20JN(开头)</td></tr><tr><td>硬盘</td><td>换的杂牌m.2 128G</td></tr></tbody></table><h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><h3 id="下载和制作安装盘"><a href="#下载和制作安装盘" class="headerlink" title="下载和制作安装盘"></a>下载和制作安装盘</h3><p>我先用<code>installinstallmacos</code>下载了最新版 MacOS Monterey 的安装盘<br><a href="https://github.com/munki/macadmin-scripts/blob/main/installinstallmacos.py">https://github.com/munki/macadmin-scripts/blob/main/installinstallmacos.py</a></p><p>然后，我在另一台 mac 上用如下命令刻录了一个启动 U 盘</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/Udisk</span><br></pre></td></tr></table></figure><p><img src="https://s2.loli.net/2022/05/21/U6HjupeGzMlyCvQ.jpg" alt="macos-big-sur-terminal-create-bootable-installer.jpg"></p><p>其中 Udisk 是U盘的卷名，需要输入密码和确认<br>出现提示时，请键入管理员密码，然后再次按下 Return 键。在您键入密码时，“终端”不会显示任何字符。<br>出现提示时，请键入 Y 以确认您要抹掉宗卷，然后按下 Return 键。在抹掉宗卷的过程中，“终端”会显示进度。<br>宗卷被抹掉后，可能会看到一条提醒，提示“终端”要访问可移除宗卷上的文件。点按“好”以允许继续拷贝。 </p><p>如果你是Windows 用户的话，可以尝试用<code>TransMac</code>来制作安装盘，然后用<code>DiskGenius</code>直接打开EFI分区进行文件拷贝。这是我认为最便捷的方式了。</p><p>之后我制作了EFI，主要是从Github上找了个ACPI，然后更新了一下驱动和Clover引导器。<strong>EFI分享链接见文末.</strong></p><p>链接: &lt;<a href="https://pan.baidu.com/s/1f0y4dfgZpfKnxaQHuTpcnw">https://pan.baidu.com/s/1f0y4dfgZpfKnxaQHuTpcnw</a> &gt;<br>提取码: <code>04lo</code></p><p>然后，我用Clover Configurator 挂载上刻录好的安装盘的EFI 分区，把引导放了进去。</p><p><img src="https://s2.loli.net/2022/05/21/85L6jkyMhBNqi3z.png" alt="Screen Shot 2022-05-21 at 9.38.47 AM.png"></p><p><img src="https://s2.loli.net/2022/05/21/antFi1HNpTRgKWS.png" alt="Screen Shot 2022-05-21 at 9.40.21 AM.png"></p><h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><p>我把安装盘插到笔记本上，按F12选择启动项，成功进入了安装器。<br>上一次因为<code>PM981</code>的原因没有安装成功，这一次换了硬盘，第一阶段安装没出任何问题。</p><p>但是在重启进入第二次安装阶段的时候，启动项没了。我试着从<code>Preboot</code>卷启动，没想到正常安装了。<br>接着就是进入系统，配置各种设置，都是常规操作了。</p><h3 id="进入系统"><a href="#进入系统" class="headerlink" title="进入系统"></a>进入系统</h3><p>我把EFI分区用Clover Configurator 克隆到了笔记本硬盘里，克隆EFI的过程同安装盘，然后检查了驱动，发现如下</p><table><thead><tr><th>部件</th><th>状态</th></tr></thead><tbody><tr><td>显卡</td><td>显存 ✅</td></tr><tr><td>网卡</td><td>WI-FI✅</td></tr><tr><td></td><td>蓝牙❎</td></tr><tr><td>声卡及输入输出</td><td>✅</td></tr><tr><td>电源管理</td><td>✅</td></tr><tr><td>触摸板小红点</td><td>✅</td></tr><tr><td>摄像头</td><td>✅</td></tr><tr><td>雷电</td><td>❎</td></tr><tr><td>息屏和休眠</td><td>❎</td></tr></tbody></table><p>为了防止休眠后冻屏，我使用了如下命令关闭了休眠</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo pmset -a hibernatemode 0</span><br><span class="line">sudo pmset -a autopoweroff 0</span><br><span class="line">sudo pmset -a standby 0</span><br><span class="line">sudo <span class="built_in">rm</span> /var/vm/sleepimage</span><br></pre></td></tr></table></figure><h2 id="EFI介绍及分享"><a href="#EFI介绍及分享" class="headerlink" title="EFI介绍及分享"></a>EFI介绍及分享</h2><p>这个EFI主要是基于Github上的项目<br>我做了如下改动</p><ol><li>更新了大部分驱动和Clover</li><li>配置了<code>itlwm</code>来驱动 Intel网卡</li><li>修改了<code>config.plist</code>的语法错误</li><li>编译了T460的ACPI Table,使音响能正常驱动</li></ol><p>链接: &lt;<a href="https://pan.baidu.com/s/1f0y4dfgZpfKnxaQHuTpcnw">https://pan.baidu.com/s/1f0y4dfgZpfKnxaQHuTpcnw</a> &gt;<br>提取码: <code>04lo</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前些天拿到了块新的 nvme 硬盘，顺道给之前没装上的 t470 装个黑苹果。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hackintosh" scheme="https://hiztr.cn/categories/Hackintosh/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2022年 RB67 入坑指南</title>
     <link href="https://hiztr.cn/2022/02/10/rb67-introduction/"/>
     <id>https://hiztr.cn/2022/02/10/rb67-introduction/</id>
     <published>2022-02-10T00:45:09.000Z</published>
-    <updated>2022-05-20T13:31:21.846Z</updated>
+    <updated>2022-05-20T14:01:40.304Z</updated>
     
     <content type="html"><![CDATA[<p>我于2022年2月8日在闲鱼以3000的价格购得了一部玛米亚 RB67 pro 现在记录下来</p><span id="more"></span><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>RB67 是玛米亚在上世纪七十年代开始制造的一款中画幅相机，可旋转的后背（Rotating Back）是该系列最显著的特征。</p><p><img src="https://s2.loli.net/2022/05/20/DOXI9ntK2seQ7xb.jpg" alt="rb67.jpeg"></p><p>该系列共有三个产品，分别是<code>Pro</code> <code>Pro S</code> <code>Pro SD</code><br>其中Pro年代最久远，功能最少，所以很少见到；Pro S和SD都比较新，功能也相近，所以推荐的多。<br>不知从啥时候开始，胶卷突然就火起来了。120相机也长得飞起，links和跑焦熊可谓是玛米亚本世纪代言人了（笑）。<br>说起来中画幅的复兴，还得说道周杰伦的《说好不哭》。MV 中男主收到的哈苏503就是经典的一台中画幅相机。从此之后中画幅的价格就一路水涨船高，哈苏已经去到小一万，成为比肩徕卡的存在。身为穷人的我也只能选RB67和基辅这类大路货了。<br>RB67这类120单反，最吸引人的，还是独特的<strong>腰平取景</strong>方式。这类取景器的美，是没使用过的人体会不到的。甚至有的时候会觉得，取景器里看到的画面比实际洗出来的胶片还要好看。又有谁不喜欢一个又大又亮的光学取景器呢？</p><h2 id="特性介绍"><a href="#特性介绍" class="headerlink" title="特性介绍"></a>特性介绍</h2><h3 id="镜头"><a href="#镜头" class="headerlink" title="镜头"></a>镜头</h3><p>玛米亚的镜头差距相对还是很大的，我这台就是用了<code>Sekor C 127mm f3.8</code>镜头。有趣的是，这些镜头都是镜间快门。但是出身精工（做表的），这些快门也很准很有力，也算是名家出身了。</p><p>玛米亚全系的镜头分为最高贵的APO系列，新一些的KL系列，比较好的Sekor C系列和平平无奇的Sekor系列。<br>这其中，APO价格极其昂贵，而且由于是长焦，重量十分感人，一般没人会买来用。<br>KL系列是后期，相对来说效果会好一点，但是要注意是否配有RB67兼容接圈，毕竟这个圈也不好买。<br>Sekor C是最推荐的镜头，因为它的性价比居高。<br>Sekor因为比较老了，不是很推荐，备用的话也不是不行。</p><p>在选购上述镜头的时候要特别注意镜头是否起雾，由于胶合工艺问题，老些的镜头容易起雾。虽然可以解决，但是比较麻烦。</p><h3 id="对焦屏"><a href="#对焦屏" class="headerlink" title="对焦屏"></a>对焦屏</h3><p>玛米亚的增亮对焦屏原厂及最佳，并不是很需要裂像对焦，因为它实在是太大了，你要是说实在是看不清还有个放大镜。这个放大镜还是挺实用的，但要注意是不是老花镜片，不然就越看越不清了。<br>原厂的对焦屏有一层有机涂层，注意磨砂面一定不能用酒精擦，不然就废了。</p><p><img src="https://s2.loli.net/2022/05/20/fwHJNqsPAodD7v8.jpg" alt="对焦屏.jpeg"></p><h3 id="后背"><a href="#后背" class="headerlink" title="后背"></a>后背</h3><p><img src="https://s2.loli.net/2022/05/20/N8vnyidRUhG1XCF.png" alt="说明书.jpeg"></p><p>初代67的后背比之前的结实多了，是纯金属的，拿在手里很有分量。我这台机原先机主摔了好几次都没坏。<br>这些后背都带防多重曝光机构，但是如果机身不支持的话需要先掰一下计数窗对着的那个金属拨片(多重曝光手柄)才能过片。</p><p>记得拍照前拔豆腐刀（侧面）不然是按不下快门的。</p><p><img src="https://s2.loli.net/2022/05/20/p9je8xIvaq15bDE.jpg" alt="645后背.jpeg"></p><h3 id="其他事项"><a href="#其他事项" class="headerlink" title="其他事项"></a>其他事项</h3><p>玛米亚用的是<code>3/8</code>而不是常规的<code>1/4</code>脚架接口，一般商家都会附赠一个转接环。<br>另外跑焦熊出了一款专用快装板，感觉很实用，可以接手柄。但是据说会头重脚轻？</p><p>另外快门扳手不按到底是不会反弹的，但是反光板可能已经复位了，这时候直接按到底才能按快门。<br>我第一次就被这个快门扳手摆了一道，怎么也按不动快门，没想到是这么回事😓。</p><p>另外玛米亚有<strong>反光板预升</strong>的功能，可以避免机器震动，但这时候你必须一台快门线，尤其是使用T门的时候。</p><p>另外玛米亚使用了皮腔对焦，这使得它能兼容很多奇怪镜头，但是这个东西可能会坏，幸好网上可以换。<br>如果皮腔伸出来太长，需要根据机器侧面的曝光信息板增加曝光。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>玛米亚RB67作为上个世纪最常见的影楼机必然有他的独特之处。他全金属的机身就说明了坚固耐用的特点，全模块化的设计为快速摄影提供了便捷，多种多样的安全设施最大程度降低了废片率。不得不说，这台相机不仅仅是相机，更是一件工业与艺术的结晶。作为中画幅新手的入坑之选，它实在是再合适不过了。四五十年后，再度捧起它来，洋溢在我心中的激动，与几十年前的那位摄影师应该一样吧。</p>]]></content>
     
