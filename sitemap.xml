@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hiztr.cn/2022/07/02/wenyan/</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/404.html</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/2022/07/02/film-light-estimate/</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hiztr.cn/2022/06/14/beautifulsoup-workout/</loc>
     
     <lastmod>2022-06-14</lastmod>
@@ -59,15 +86,6 @@
     <loc>https://hiztr.cn/2021/01/29/lenovo-m73-hackintosh/</loc>
     
     <lastmod>2021-07-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hiztr.cn/404.html</loc>
-    
-    <lastmod>2021-01-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -184,7 +202,7 @@
 
   <url>
     <loc>https://hiztr.cn/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -192,35 +210,42 @@
   
   <url>
     <loc>https://hiztr.cn/tags/java/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/Website/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/springboot/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/python/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/tags/%E8%83%B6%E5%8D%B7%E6%91%84%E5%BD%B1/</loc>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/tags/loafing/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -229,21 +254,28 @@
   
   <url>
     <loc>https://hiztr.cn/categories/Develop/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/categories/Hackintosh/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hiztr.cn/categories/Other/</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hiztr.cn/categories/Photography/</loc>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
