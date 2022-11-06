@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hiztr.cn/2022/11/03/minecraft-server-set-up/</loc>
+    <lastmod>2022-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://hiztr.cn/2020/05/17/Image-hosting-tips/</loc>
+    <lastmod>2022-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://hiztr.cn/2020/06/01/Static-website-build-insturction/</loc>
+    <lastmod>2022-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://hiztr.cn/2022/07/02/wenyan/</loc>
     <lastmod>2022-07-02</lastmod>
   </url>
@@ -41,15 +53,7 @@
     <lastmod>2020-06-05</lastmod>
   </url>
   <url>
-    <loc>https://hiztr.cn/2020/06/01/Static-website-build-insturction/</loc>
-    <lastmod>2020-06-05</lastmod>
-  </url>
-  <url>
     <loc>https://hiztr.cn/2020/03/04/Make_a_gui_in_java/</loc>
-    <lastmod>2020-06-05</lastmod>
-  </url>
-  <url>
-    <loc>https://hiztr.cn/2020/05/17/Image-hosting-tips/</loc>
     <lastmod>2020-06-05</lastmod>
   </url>
   <url>
