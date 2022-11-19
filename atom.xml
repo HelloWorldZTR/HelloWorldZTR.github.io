@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hiztr.cn/"/>
-  <updated>2022-11-06T04:30:05.607Z</updated>
+  <updated>2022-11-06T04:44:11.586Z</updated>
   <id>https://hiztr.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SM.MS网站打不开的解决办法</title>
+    <link href="https://hiztr.cn/2022/11/06/smms-out-of-service-solution/"/>
+    <id>https://hiztr.cn/2022/11/06/smms-out-of-service-solution/</id>
+    <published>2022-11-06T04:41:19.000Z</published>
+    <updated>2022-11-06T04:44:11.586Z</updated>
+    
+    <content type="html"><![CDATA[<p>解决smms图床在国内使用不能连接的问题。</p><span id="more"></span><p>在国内现在部分网络已经打不开 SM.MS 了<br>但是可以使用<a href="https://smms.app">https://smms.app</a>替代（是完全一样的）。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;解决smms图床在国内使用不能连接的问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="https://hiztr.cn/categories/Other/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>五分钟搭建 Minecraft 服务器</title>
