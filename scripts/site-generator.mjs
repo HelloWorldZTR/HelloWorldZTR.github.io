@@ -3,10 +3,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { processPhotos } from "./photo-pipeline.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const contentRoot = path.join(projectRoot, "content");
 const generatedRoot = path.join(projectRoot, ".generated");
+const photosSourceRoot = path.join(contentRoot, "photos");
+const photosOutputRoot = path.join(projectRoot, "public", "photos");
 
 const navigation = [
   { key: "home", label: "Home", href: "/" },
@@ -217,12 +220,32 @@ function listingBody(type, entries) {
 <p>Create one with <code>npm run new -- ${singular} your-${singular}</code>.</p>`;
   }
 
+  if (type === "projects") {
+    const rows = entries
+      .map((entry) => `<tr>
+  <td><a href="/projects/${escapeHtml(entry.slug)}/"><strong>${escapeHtml(entry.title)}</strong></a></td>
+  <td class="date-cell">${escapeHtml(entry.date)}</td>
+  <td>${escapeHtml(entry.summary)}</td>
+</tr>`)
+      .join("\n");
+
+    return `<div class="table-scroll">
+  <table class="record-table">
+    <thead><tr><th>Project</th><th>Date</th><th>Description</th></tr></thead>
+    <tbody>
+${rows}
+    </tbody>
+  </table>
+</div>`;
+  }
+
   const items = entries
     .map((entry) => {
       const when = type === "projects" ? entry.date : entry.year;
       const details = [when, entry.venue].filter(Boolean).map(escapeHtml).join(" &mdash; ");
       return `<li>
   <a href="/${type}/${escapeHtml(entry.slug)}/"><strong>${escapeHtml(entry.title)}</strong></a>
+  ${type === "publications" && entry.authors ? `<p class="authors">${escapeHtml(entry.authors)}</p>` : ""}
   ${details ? `<p class="meta">${details}</p>` : ""}
   <p>${escapeHtml(entry.summary)}</p>
 </li>`;
@@ -269,6 +292,7 @@ export async function generateSite() {
   const cv = await readMarkdown(path.join(contentRoot, "cv.md"));
   const projects = await readCollection("projects");
   const publications = await readCollection("publications");
+  await processPhotos(photosSourceRoot, photosOutputRoot);
 
   await fs.rm(generatedRoot, { recursive: true, force: true });
   await fs.mkdir(generatedRoot, { recursive: true });

@@ -19,6 +19,7 @@ const required = [
   "gifs/envelope_opens.gif",
   "gifs/rhombus.gif",
   "gifs/hand_right.gif",
+  "photos/manifest.json",
   ".nojekyll"
 ];
 

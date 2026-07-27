@@ -238,15 +238,13 @@ button:focus-visible {
 }
 
 .content-body {
-  min-height: 430px;
-  padding: 14px 18px 28px;
+  padding: 0 18px;
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   line-height: 1.35;
 }
 
 .content-body h1 {
-  margin-top: 0;
   font-size: 1.65rem;
 }
 
@@ -273,6 +271,10 @@ button:focus-visible {
   margin: 3px 0;
 }
 
+.authors {
+  font-size: 0.95em;
+}
+
 .meta {
   color: #000080;
   font-size: 0.9rem;
@@ -294,7 +296,8 @@ button:focus-visible {
   margin-bottom: 3px;
 }
 
-.empty-table {
+.empty-table,
+.record-table {
   width: 100%;
   border-collapse: collapse;
   font-family: Arial, Helvetica, sans-serif;
@@ -302,19 +305,33 @@ button:focus-visible {
 }
 
 .empty-table th,
-.empty-table td {
+.empty-table td,
+.record-table th,
+.record-table td {
   padding: 5px 7px;
   border: 1px solid #808080;
   text-align: left;
+  vertical-align: top;
 }
 
-.empty-table th {
+.empty-table th,
+.record-table th {
   color: #ffffff;
   background: #008080;
 }
 
-.empty-table td {
+.empty-table td,
+.record-table td {
   background: #ffffff;
+}
+
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.date-cell {
+  white-space: nowrap;
 }
 
 code,
@@ -324,10 +341,14 @@ pre {
 
 pre {
   max-width: 100%;
-  padding: 8px;
+  margin: 1em 0;
+  padding: 0;
   overflow: auto;
-  border: 2px inset #ffffff;
-  background: #c0c0c0;
+  border: 0;
+  color: inherit;
+  background: #ffffff;
+  font-size: 0.9375em;
+  line-height: inherit;
 }
 
 .footer {
@@ -414,8 +435,7 @@ pre {
   }
 
   .content-body {
-    min-height: 280px;
-    padding: 12px;
+    padding: 0 12px;
   }
 }
 

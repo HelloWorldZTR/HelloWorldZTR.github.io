@@ -66,6 +66,28 @@ url: "https://doi.org/example"
 
 The `url`, `authors`, and `venue` fields may be left empty.
 
+## Low-fidelity photos
+
+Put original images in `content/photos/`. During development and production builds, each supported source image is automatically:
+
+- auto-rotated from its camera metadata;
+- resized to fit within 640 × 480 without enlargement;
+- converted to a baseline JPEG at quality 65 with 4:2:0 chroma subsampling;
+- given a very slight warm automatic-white-balance cast and subtly reduced saturation;
+- softened only slightly after resizing to resemble an early digital-camera lens, without an obvious vintage filter, glitch, or heavy compression artifacts;
+- stripped of metadata;
+- written to `public/photos/` with a lowercase URL-safe filename.
+
+Generated photos are intentionally retained and can be committed to Git. The pipeline only creates or overwrites matching outputs; deleting a source image never cascades to its generated photo or manifest entry. To remove a generated photo permanently, delete its JPEG from `public/photos/` and remove the corresponding object from `public/photos/manifest.json`. Supported source formats are JPEG, PNG, WebP, AVIF, and TIFF.
+
+For example, `content/photos/My Camera.JPG` becomes `/photos/my-camera.jpg` and can be used in Markdown:
+
+```md
+![Description of the photo](/photos/my-camera.jpg)
+```
+
+`/photos/manifest.json` lists every generated file, its dimensions, and byte size. Keep source filenames unique after lowercasing and replacing punctuation or spaces with hyphens.
+
 ## GitHub Pages
 
 The workflow in `.github/workflows/deploy.yml` builds and deploys the site whenever `main` is pushed, or when it is started manually.

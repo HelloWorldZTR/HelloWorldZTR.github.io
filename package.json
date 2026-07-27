@@ -8,11 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "new": "node scripts/create-content.mjs",
-    "check": "npm run build && node scripts/verify-build.mjs"
+    "check": "npm run build && node scripts/verify-build.mjs && node scripts/verify-photo-pipeline.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "marked": "^16.4.0"
+    "marked": "^16.4.0",
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
     "vite": "^7.2.0"
