@@ -1,5 +1,9 @@
-# Hello
+# Welcome!
 
-Welcome to my personal academic homepage.
+You have reached the home page of HelloWorldZTR.
 
-This site collects my projects, publications, and curriculum vitae. Its content is maintained as plain Markdown and published as static HTML.
+Here you will find projects, publications, and a curriculum vitae. Please use the links on the left to look around.
+
+---
+
+This site is deliberately simple. It is written in plain Markdown and published as static HTML.

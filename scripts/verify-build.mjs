@@ -11,6 +11,11 @@ const required = [
   "cv/index.html",
   "404.html",
   "style.css",
+  "images/avatar.jpg",
+  "badges/cc-by-sa.gif",
+  "badges/css3.gif",
+  "badges/4x3_fade.gif",
+  "badges/anybrowser2.gif",
   ".nojekyll"
 ];
 
@@ -42,7 +47,7 @@ for (const file of files.filter((item) => /\.(?:html|css|txt)$/i.test(item))) {
 
 const homepage = await fs.readFile(path.join(dist, "index.html"), "utf8");
 for (const href of ["/", "/projects/", "/publications/", "/cv/"]) {
-  if (!homepage.includes(`href="${href}"`)) {
+  if (!homepage.includes(`href="${href}"`) && !homepage.includes(`action="${href}"`)) {
     throw new Error(`Homepage is missing navigation link: ${href}`);
   }
 }

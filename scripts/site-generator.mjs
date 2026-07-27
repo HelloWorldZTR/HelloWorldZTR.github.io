@@ -111,7 +111,7 @@ function layout({ config, active, title, body, description = config.description 
   const nav = navigation
     .map(({ key, label, href }) => {
       const current = key === active ? ' aria-current="page"' : "";
-      return `<li><a href="${href}"${current}>${escapeHtml(label)}</a></li>`;
+      return `<form action="${href}" method="get"><button type="submit"${current}>${escapeHtml(label)}</button></form>`;
     })
     .join("\n");
 
@@ -125,24 +125,49 @@ function layout({ config, active, title, body, description = config.description 
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="page">
+  <div class="oa-shell">
+    <div class="utility-bar">
+      <span>INTERNAL INFORMATION SYSTEM</span>
+      <span class="window-controls" aria-hidden="true">
+        <button type="button" tabindex="-1">_</button>
+        <button type="button" tabindex="-1">□</button>
+        <button type="button" tabindex="-1">×</button>
+      </span>
+    </div>
     <header class="masthead">
-      <h1>${escapeHtml(config.title)}</h1>
-      <p>${escapeHtml(config.description)}</p>
+      <div>
+        <h1>${escapeHtml(config.title)} OA</h1>
+        <p>Personal Research &amp; Information Office</p>
+      </div>
     </header>
     <div class="layout">
-      <nav class="sidebar" aria-label="Primary navigation">
-        <strong>Contents</strong>
-        <ul>
+      <aside class="sidebar">
+        <div class="panel-title">USER PROFILE</div>
+        <div class="profile">
+          <img src="/images/avatar.jpg" width="128" height="128" alt="Avatar of ${escapeHtml(config.author)}">
+          <strong>${escapeHtml(config.author)}</strong>
+          <p>${escapeHtml(config.description)}</p>
+        </div>
+        <nav class="nav-panel" aria-label="Primary navigation">
           ${nav}
-        </ul>
-      </nav>
-      <main>
-        ${body}
+        </nav>
+      </aside>
+      <main class="workspace">
+        <div class="window-title">${escapeHtml(title)}</div>
+        <div class="content-body">
+          ${body}
+        </div>
       </main>
     </div>
     <footer class="footer">
-      Maintained by ${escapeHtml(config.author)}. Built from plain Markdown.
+      <div class="badges" aria-label="Site technology">
+        <img src="/badges/cc-by-sa.gif" width="88" height="31" alt="Creative Commons Attribution-ShareAlike">
+        <img src="/badges/css3.gif" width="88" height="31" alt="CSS">
+        <img src="/badges/4x3_fade.gif" width="88" height="31" alt="Designed for a 4:3 display">
+        <img src="/badges/anybrowser2.gif" width="88" height="31" alt="Viewable with any browser">
+      </div>
+      <address>Maintained by ${escapeHtml(config.author)}</address>
+      <div>Optimized for 800 &times; 600 display &middot; 16 color compatible</div>
     </footer>
   </div>
 </body>
@@ -154,8 +179,11 @@ function listingBody(type, entries) {
   const heading = type === "projects" ? "Projects" : "Publications";
   const singular = type === "projects" ? "project" : "publication";
   if (entries.length === 0) {
-    return `<h1>${heading}</h1>
-<p class="empty">No ${heading.toLowerCase()} have been added yet. Create one with <code>npm run new -- ${singular} your-${singular}</code>.</p>`;
+    return `<table class="empty-table">
+  <thead><tr><th>Status</th><th>Information</th></tr></thead>
+  <tbody><tr><td>NO RECORDS</td><td>No ${heading.toLowerCase()} have been added yet.</td></tr></tbody>
+</table>
+<p>Create one with <code>npm run new -- ${singular} your-${singular}</code>.</p>`;
   }
 
   const items = entries
@@ -170,8 +198,7 @@ function listingBody(type, entries) {
     })
     .join("\n");
 
-  return `<h1>${heading}</h1>
-<ol class="entries">
+  return `<ol class="entries">
 ${items}
 </ol>`;
 }
