@@ -17,6 +17,15 @@ body {
 }
 
 .crt-enabled .oa-shell {
+  /*
+   * Safari rasterizes a filtered subtree before applying fractional blur,
+   * which makes text look much softer than Chrome. Keep its CRT treatment
+   * crisp and add the slight optical softness only on Chrome/Blink.
+   */
+  filter: contrast(0.94) saturate(0.84);
+}
+
+.crt-enabled.crt-softened .oa-shell {
   filter: contrast(0.94) saturate(0.84) blur(0.18px);
 }
 

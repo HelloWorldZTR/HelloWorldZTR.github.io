@@ -136,13 +136,22 @@ function layout({ config, active, title, body, description = config.description 
   <script>
   <!--
   (function () {
+    var userAgent;
+
     if (!document.documentElement ||
         typeof window.CSS === "undefined" ||
         typeof window.CSS.supports !== "function" ||
-        !window.CSS.supports("filter", "contrast(0.94)")) {
+        !window.CSS.supports("filter", "contrast(0.94) saturate(0.84)")) {
       return;
     }
+
     document.documentElement.className += " crt-enabled";
+
+    userAgent = navigator.userAgent || "";
+    if (/(?:Chrome|Chromium)\\//.test(userAgent) &&
+        !/(?:CriOS|Edg|OPR)\\//.test(userAgent)) {
+      document.documentElement.className += " crt-softened";
+    }
   }());
   // -->
   </script>

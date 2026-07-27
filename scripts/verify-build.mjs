@@ -56,6 +56,9 @@ if (!homepage.includes('document.documentElement.className += " crt-enabled"')) 
 if (!homepage.includes('typeof window.CSS.supports !== "function"')) {
   throw new Error("CRT enhancement is missing its CSS capability fallback.");
 }
+if (!homepage.includes('document.documentElement.className += " crt-softened"')) {
+  throw new Error("CRT enhancement is missing its Chrome-only softening.");
+}
 if (!homepage.includes('href="https://github.com/helloworldztr"')) {
   throw new Error("Homepage is missing the GitHub profile link.");
 }
