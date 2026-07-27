@@ -16,6 +16,9 @@ const required = [
   "badges/css3.gif",
   "badges/4x3_fade.gif",
   "badges/anybrowser2.gif",
+  "gifs/envelope_opens.gif",
+  "gifs/rhombus.gif",
+  "gifs/hand_right.gif",
   ".nojekyll"
 ];
 
@@ -46,10 +49,22 @@ for (const file of files.filter((item) => /\.(?:html|css|txt)$/i.test(item))) {
 }
 
 const homepage = await fs.readFile(path.join(dist, "index.html"), "utf8");
+if (!homepage.includes('document.documentElement.className += " crt-enabled"')) {
+  throw new Error("Homepage is missing the progressive CRT enhancement.");
+}
+if (!homepage.includes('typeof window.CSS.supports !== "function"')) {
+  throw new Error("CRT enhancement is missing its CSS capability fallback.");
+}
+if (!homepage.includes('href="https://github.com/helloworldztr"')) {
+  throw new Error("Homepage is missing the GitHub profile link.");
+}
+if (!homepage.includes('href="mailto:hlwdztr@gmail.com"')) {
+  throw new Error("Homepage is missing the e-mail link.");
+}
 for (const href of ["/", "/projects/", "/publications/", "/cv/"]) {
   if (!homepage.includes(`href="${href}"`) && !homepage.includes(`action="${href}"`)) {
     throw new Error(`Homepage is missing navigation link: ${href}`);
   }
 }
 
-console.log(`Verified ${files.length} static files with no runtime JavaScript.`);
+console.log(`Verified ${files.length} static files and progressive CRT fallback.`);

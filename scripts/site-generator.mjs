@@ -24,6 +24,13 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function stripHtml(value) {
+  return String(value)
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function safeUrl(value) {
   if (!value) return "";
   const url = String(value).trim();
@@ -120,9 +127,22 @@ function layout({ config, active, title, body, description = config.description 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="${escapeHtml(description)}">
+  <meta name="description" content="${escapeHtml(stripHtml(description))}">
   <title>${escapeHtml(fullTitle)}</title>
   <link rel="stylesheet" href="/style.css">
+  <script>
+  <!--
+  (function () {
+    if (!document.documentElement ||
+        typeof window.CSS === "undefined" ||
+        typeof window.CSS.supports !== "function" ||
+        !window.CSS.supports("filter", "contrast(0.94)")) {
+      return;
+    }
+    document.documentElement.className += " crt-enabled";
+  }());
+  // -->
+  </script>
 </head>
 <body>
   <div class="oa-shell">
@@ -136,8 +156,8 @@ function layout({ config, active, title, body, description = config.description 
     </div>
     <header class="masthead">
       <div>
-        <h1>${escapeHtml(config.title)} OA</h1>
-        <p>Personal Research &amp; Information Office</p>
+        <h1>${escapeHtml(config.title)}'s Profile</h1>
+        <p>Personal information</p>
       </div>
     </header>
     <div class="layout">
@@ -146,11 +166,22 @@ function layout({ config, active, title, body, description = config.description 
         <div class="profile">
           <img src="/images/avatar.jpg" width="128" height="128" alt="Avatar of ${escapeHtml(config.author)}">
           <strong>${escapeHtml(config.author)}</strong>
-          <p>${escapeHtml(config.description)}</p>
+          <div class="profile-description">${config.description}</div>
         </div>
         <nav class="nav-panel" aria-label="Primary navigation">
           ${nav}
         </nav>
+        <div class="contact-panel">
+          <strong>PERSONAL LINKS</strong>
+          <div class="contact-link">
+            <img src="/gifs/hand_right.gif" width="64" height="24" alt="">
+            <a href="https://github.com/helloworldztr">My GitHub</a>
+          </div>
+          <div class="contact-link">
+            <img src="/gifs/envelope_opens.gif" width="43" height="43" alt="">
+            <a href="mailto:hlwdztr@gmail.com">E-mail Me</a>
+          </div>
+        </div>
       </aside>
       <main class="workspace">
         <div class="window-title">${escapeHtml(title)}</div>
@@ -166,8 +197,8 @@ function layout({ config, active, title, body, description = config.description 
         <img src="/badges/4x3_fade.gif" width="88" height="31" alt="Designed for a 4:3 display">
         <img src="/badges/anybrowser2.gif" width="88" height="31" alt="Viewable with any browser">
       </div>
-      <address>Maintained by ${escapeHtml(config.author)}</address>
-      <div>Optimized for 800 &times; 600 display &middot; 16 color compatible</div>
+      <address>${escapeHtml(config.author)} Copyright 2005</address>
+      <div>Best viewed on 800 &times; 600 display &middot; 16 color compatible</div>
     </footer>
   </div>
 </body>

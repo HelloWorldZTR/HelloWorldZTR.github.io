@@ -1,6 +1,6 @@
 # HelloWorldZTR academic homepage
 
-A small Markdown-driven Vite site for `https://HelloWorldZTR.github.io/`. The generated site uses static HTML and one stylesheet; it has no browser-side JavaScript or frontend framework.
+A small Markdown-driven Vite site for `https://HelloWorldZTR.github.io/`. The generated site uses static HTML, one stylesheet, and no frontend framework. A tiny inline progressive-enhancement script enables the optional CRT treatment only when the browser supports the required JavaScript and CSS APIs; the complete site remains usable without JavaScript.
 
 ## Local development
 
@@ -24,7 +24,7 @@ The production files are written to `dist/`.
 
 ## Edit the site
 
-General settings live in `site.config.json`.
+General settings live in `site.config.json`. The `description` field accepts trusted inline HTML for the profile panel; because this file is repository-owned content, it is rendered without sanitization.
 
 - Home: `content/home.md`
 - CV: `content/cv.md`
