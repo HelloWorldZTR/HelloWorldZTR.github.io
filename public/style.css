@@ -190,6 +190,13 @@ button:focus-visible {
   vertical-align: middle;
 }
 
+.profile-globe {
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
 .profile-item {
   display: block;
   margin-top: 4px;
