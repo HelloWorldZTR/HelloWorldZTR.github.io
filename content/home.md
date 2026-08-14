@@ -18,8 +18,12 @@ I am currently pursuing my undergraduate degree at Peking University. My researc
 In my spare time, I enjoy electronics and building DIY hardware projects. You can check out some of my work <a href="/projects/?">here</a>.
 
 ```
-Last Update: 2026-07-28
+Last Update: 2026-08-14
 
+* Updated profile avatar.
+* Added the ProShock high-performance gamepad controller project.
+
+Change log: 2026-07-28
 * Site launched.
 * Added profile page.
 * Uploaded publications and project.

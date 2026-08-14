@@ -1,5 +1,26 @@
 [
   {
+    "source": "proshock-board.png",
+    "output": "/photos/proshock-board.jpg",
+    "width": 640,
+    "height": 446,
+    "bytes": 31159
+  },
+  {
+    "source": "proshock-mcu.jpg",
+    "output": "/photos/proshock-mcu.jpg",
+    "width": 640,
+    "height": 385,
+    "bytes": 23787
+  },
+  {
+    "source": "proshock-pcb.jpg",
+    "output": "/photos/proshock-pcb.jpg",
+    "width": 640,
+    "height": 425,
+    "bytes": 17375
+  },
+  {
     "source": "yppf-mini-ui.png",
     "output": "/photos/yppf-mini-ui.jpg",
     "width": 640,
