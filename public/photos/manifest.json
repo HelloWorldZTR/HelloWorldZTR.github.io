@@ -1,5 +1,26 @@
 [
   {
+    "source": "ch32v305-pico-board.jpg",
+    "output": "/photos/ch32v305-pico-board.jpg",
+    "width": 360,
+    "height": 480,
+    "bytes": 16253
+  },
+  {
+    "source": "ch32v305-pico-mcu.jpg",
+    "output": "/photos/ch32v305-pico-mcu.jpg",
+    "width": 360,
+    "height": 480,
+    "bytes": 23539
+  },
+  {
+    "source": "ch32v305-pico-pcbs.jpg",
+    "output": "/photos/ch32v305-pico-pcbs.jpg",
+    "width": 360,
+    "height": 480,
+    "bytes": 25928
+  },
+  {
     "source": "proshock-board.png",
     "output": "/photos/proshock-board.jpg",
     "width": 640,
